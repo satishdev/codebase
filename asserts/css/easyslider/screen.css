@@ -1,0 +1,23 @@
+
+.clr{ clear:both;}
+*{ margin:0px; padding:0px;}
+
+#container{	 margin:0 auto; position:relative; text-align:left; width:300px; background:#fff;}
+
+#content{ position:relative; }
+ 
+#slider li{ width:300px; height:200px; overflow:hidden;  }
+
+#prevBtn, #nextBtn{ display:block; width:60px;  position:absolute; top:121px; z-index:1000; }
+
+#prevBtn{ left:0px;}
+
+#nextBtn{right:0px; }
+
+#prevBtn a, #nextBtn a{ display:block; position:relative;  background:#FFFFFF; line-height:30px; color:#000000; text-align:center;}	
+
+#nextBtn a{ background:#FFFFFF; }	
+
+#prevBtn a:hover{ opacity:0.9;}
+
+#nextBtn a:hover{ opacity:0.9;}

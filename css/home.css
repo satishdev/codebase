@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+
+.left_column {
+    float: left;
+    width: 660px;
+}
+.right_column {
+    float: left;
+    width: 310px;
+}
+.left_column_box{
+    border: 1px solid #CCCCCC;
+    margin: 20px;
+    padding: 5px;
+}
+
+.left_slider_box{
+ 	margin: 20px;
+}
+.player_registration_form{
+    margin-top: 15px;
+}
+.player_registration_form  ol li{
+    padding: 5px 0;
+	overflow: hidden;
+}
+.player_registration_form  ol li label{
+    padding: 5px 0 0;
+    width: 95px;
+}
+
+.player_registration_form ol li input.text {
+    width: 195px;
+    height: 16px;
+}
+.player_registration_form ol li select.text  {
+    width:201px;
+}
+
+.right_column .club_registration{
+	margin: 20px;
+}
+.club_registration li label {
+    padding: 2px 0 0;
+}
+.club_registration li input.text {
+   width: 270px;
+    height: 16px;
+}
+.club_registration li select.text  {
+    width:277px;
+}
+.club_registration li div.error {
+    float: left;
+}

@@ -1,0 +1,40 @@
+#map_item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 540px;
+    height: 400px;
+}
+
+#map_item h4, h2, a {
+    color: #ffffff;
+}
+
+#map_item hr {
+    height: 10px;
+    background-color: #ffffff;
+}
+
+#map-inner {
+    background-color: #000000;
+    height: 400px;
+    opacity: 0.8;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    width: 540px;
+    top: 0;
+    position: absolute;
+}
+
+ul.map_area li {
+    float: left;
+    padding: 5px;
+    border-right: 1px solid #000000;
+    text-align: center;
+}
+#close_btn{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}

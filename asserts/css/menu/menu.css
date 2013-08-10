@@ -1,0 +1,167 @@
+/**
+ *********************************************
+ * Prototype of styles for horizontal CSS-menu22
+ * @data 30.06.2009
+ *********************************************
+ * (X)HTML-scheme:
+ *  <div id="menu22">
+ *      <ul class="menu22">
+ *          <li><a href="#" class="parent"><span>level 1</span></a>
+ *              <ul>
+ *                  <li><a href="#" class="parent"><span>level 2</span></a>
+ *                      <ul><li><a href="#"><span>level 3</span></a></li></ul>
+ *                  </li>
+ *              </ul>
+ *          </li>
+ *          <li class="last"><a href="#"><span>level 1</span></a></li>
+ *      </ul>
+ *  </div>
+ *********************************************
+ */
+
+/* menu22::base */
+div#menu22 {
+    height:31px;
+ /*   background:url(images/main-bg.png) repeat-x;*/
+}
+
+div#menu22 ul {
+  /*  margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;*/
+}
+div#menu22 ul.menu22 {
+    padding-left: 30px;
+}
+
+div#menu22 li {
+    position: relative;
+    z-index: 9;
+    margin: 0;
+    /*padding: 0 5px 0 0;
+    display: block;
+    float: left;*/
+}
+div#menu22 li:hover>ul {
+    left: -2px;
+}
+
+div#menu22 a {
+    position: relative;
+    z-index: 10;
+    height: 41px;
+    display: block;
+    float: left;
+    line-height: 41px;
+    text-decoration: none;
+    font: normal 12px Trebuchet MS;
+}
+div#menu22 a:hover, div#menu22 a:hover span { color: #fff; }
+div#menu22 a:hover { color: rgb(218,219,222); }
+div#menu22 li.current a {}
+
+
+
+div#menu22 span {
+    display: block;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 95% 0;
+}
+div#menu22 ul ul a.parent span {
+    background-position:95% 8px;
+    background-image: url(images/item-pointer.gif);
+}
+div#menu22 ul ul a.parent:hover span {
+    background-image: url(images/item-pointer-mover.gif);
+}
+
+/* menu22::level1 */
+div#menu22 a {
+   /* padding: 0 10px 0 10px;*/
+    line-height: 30px;
+    color: #e5e5e5;
+}
+div#menu22 span {
+    margin-top: 3px;
+color: #333;
+}
+div#menu22 ul a:hover span {
+color: #333;
+}
+div#menu22 ul ul span {
+color: rgb(169,169,169);
+}
+div#menu22 ul ul a:hover span {
+color: rgb(218,219,222);
+}
+
+
+div#menu22 li { /*background: url(images/main-delimiter.png) 98% 4px no-repeat;*/ }
+div#menu22 li.last { background: none; }
+
+/* menu22::level2 */
+div#menu22 ul ul li { background: none; }
+div#menu22 ul ul {
+    position: absolute;
+    top: 38px;
+    left: -999em;
+    width: 225px;
+    /*padding: 5px 0 0 0;*/
+    background: rgb(45,45,45);
+    margin-top:1px;
+	padding: 0 5px;
+}
+div#menu22 ul ul a {
+   /* padding: 0 0 0 15px;*/
+  
+    height: auto;
+    float: none;
+    display: block;
+    line-height: 24px;
+    color: rgb(169,169,169);
+}
+div#menu22 ul ul span {
+    margin-top: 0;
+    padding-right: 15px;
+    _padding-right: 20px;
+    color: rgb(169,169,169);
+}
+div#menu22 ul ul a:hover span {
+    color: #fff;
+}
+div#menu22 ul ul li.last { background: none; }
+div#menu22 ul ul li {
+    width: 100%;
+}
+
+/* menu22::level3 */
+div#menu22 ul ul ul {
+    padding: 0;
+    margin: -38px 0 0 229px !important;
+    margin-left:172px;
+}
+
+/* colors */
+div#menu22 ul ul ul { background: rgb(41,41,41); }
+div#menu22 ul ul ul ul { background: rgb(38,38,38); }
+div#menu22 ul ul ul ul { background: rgb(35,35,35); }
+
+/* lava lamp */
+div#menu22 li.back {
+    background: url(images/lava.png) no-repeat right -44px !important;
+    background-image: url(images/lava.gif);
+    width: 13px;
+    height: 44px;
+    z-index: 8;
+    position: absolute;
+    margin: -1px 0 0 -5px;
+}
+div#menu22 li.back .left {
+    background: url(images/lava.png) no-repeat top left !important;
+    background-image: url(images/lava.gif);
+    height: 44px;
+    margin-right: 8px;
+}
+

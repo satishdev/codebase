@@ -1,0 +1,594 @@
+﻿
+#card-vouchers
+{
+	margin-bottom: 15px;
+}
+
+#card-vouchers h3
+{
+	color: #003366;
+	font-size: 12px;
+	
+}
+
+#card-vouchers label
+{
+	text-align: left;
+}
+
+#card-vouchers .halfleft
+{
+	width: 340px;
+	padding-right: 5px;
+	border-right: solid 1px #CCCCCC;
+	min-height: 150px;
+}
+
+#card-vouchers .halfright
+{
+	width: 340px;
+	padding-left: 5px;
+}
+
+h2.ecards
+{
+    background-image:url("/images/icons/favicon.ico");
+    background-repeat:no-repeat;
+    background-position:0px center;
+    margin-bottom: 10px;
+    text-indent: 20px;
+}
+h2.card
+{
+    background: url("/images/icons/creditcard.gif") no-repeat scroll 0 12px transparent;
+    text-indent: 20px;
+}
+
+.apply-voucher h3
+{
+    color:#1865B5;
+    font-size:12px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+#rightnav.twocol
+{
+	width: 202px;
+}
+/*border-left: dotted 1px #CCCCCC;*/
+#main.twocol
+{
+	width: 720px;
+}
+.cart-header
+{
+	height: 27px;	
+}
+
+.cart-header p
+{
+	font-size: 11px;	
+	margin: 0px;
+	padding: 0px;	
+}
+
+.cart-header div
+{
+	position: relative;
+}
+
+.cart-header div a
+{
+	font-size: 11px;		
+}
+
+#credit-types
+{
+	display: none;
+	padding-top: 3px;
+	text-align: center;
+	margin-bottom: 3px;
+}
+#credit-types img
+{
+	padding-left: 5px;
+}
+
+table.mod.cart
+{
+	
+}
+
+
+#help-header 
+{
+	margin-bottom: 10px;
+	text-align: center;
+}
+#help-header h4
+{
+	color: #DE842D;
+}
+#help-header h2
+{
+	font-size: 18px;
+}
+#help-header p
+{
+	font-size: 12px;
+}
+#bottom-cart-totals
+{
+    width: 45%;
+    float: right;    
+}
+#cart-totals table,
+#bottom-cart-totals table
+{
+	/*margin-bottom: 20px;
+	margin-top: 27px;*/
+}
+#bottom-cart-totals table
+{
+    width: 100%;
+}
+
+#cart-totals td ,
+#bottom-cart-totals td
+{
+	text-align: right;
+	border: solid 1px #E7E7E7; 
+	padding: 8px;
+	background-color: #F2F2F2;
+}
+
+#cart-totals td.total,
+#bottom-cart-totals td.total
+{
+	font-weight: bold;	
+}
+
+#cart-totals td.debit,
+#bottom-cart-totals td.debit
+{
+    color:  Red;
+}
+
+#bottom-cart-totals form span.caption
+{
+    display: inline;
+}
+
+#cart-totals td.cart-total,
+#bottom-cart-totals td.cart-total
+{
+	background-color: #E7E7E7;
+	color: #DE842D;
+}
+
+td.due-at-course
+{
+	color: #003366;
+}
+
+#cart-contents td p a
+{
+	font-size: 12px;
+}
+
+#cart-contents td.coursenote
+{
+    border-bottom:2px solid #CCCCCC;
+    border-top:1px solid #FFFFFF;
+    background-color: #FFF9EF;
+}
+
+.coursenote.selected
+{
+    font-weight: normal;
+}
+
+
+.section
+{
+	padding-left: 5px;
+	margin-bottom: 20px;
+}
+
+.section h4
+{
+	color: #DE842D;
+	margin-bottom: 10px;
+}
+.section p
+{
+	margin-bottom: 10px;
+	color: #333333;
+}
+.section a
+{
+	color: #003366;
+}
+
+#cart-contents
+{
+	width: 100%;
+}
+
+#cart-contents th
+{
+	padding-left: 5px;
+}
+
+#cart-contents .remove
+{
+	width: 10%;
+}
+#cart-contents .desc
+{
+	width: 48%;
+	text-align: left;
+}
+
+#cart-contents .price
+{
+	width: 11%;
+}
+#cart-contents .players
+{
+	width: 8%;
+}
+#cart-contents .total
+{
+	width: 13%;
+}
+
+.overview-image
+{
+	width: 78px;
+	height: 62px;
+	margin-top: 0px;
+}
+
+a.cart-item-name
+{
+	color: #003366;
+	font-weight: bold;
+	font-size: 11px;
+	margin-bottom: 3px;
+	display: block;
+}
+
+#cart-contents span.cart-item-desc
+{	
+	display: block;
+	margin-bottom: 3px;
+}
+
+#cart-contents span.savings
+{	
+	color: #DE842D;
+	font-size: 11px;
+	padding-top: 10px;
+}
+
+#cart-contents .players select
+{
+	font-size: 11px;
+	width: 70px;
+}
+
+.footer-note
+{
+	border-right: none;
+	padding: 0px;	
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+table.module tfoot td {
+	background-color:#F2F2F2;
+	border:1px solid #E7E7E7;
+}
+
+.cart-footer form 
+{
+	width: 350px;
+}
+
+.cart-footer form fieldset
+{
+	padding-bottom: 0px;
+}
+
+#voucher-item
+{
+	margin-bottom: 8px;
+	font-size: 12px;
+	color: #333333;
+	padding-left: 15px;
+}
+#voucher-item a
+{
+	color: #003366;
+	font-weight: bold;
+}
+
+span.promo-code
+{
+	color: #BCA301;
+}
+
+.pop-info-container
+{
+	float: left;
+	position: relative;
+	display: none;
+	color: #313031;
+}
+
+.pop-info
+{
+	position: absolute;
+	border: 1px dotted #003366;
+	bottom: 1px;
+	color: #636563;
+	left: 0px;
+	background-color: #FFFFFF;
+	padding: 40px 10px 10px;
+	width: 215px;
+	z-index: 998;	
+	float: left;
+		
+}
+
+.pop-info h3
+{
+	background-color: #124578;
+	border: 1px solid #FFFFFF;
+	color: #FFFFFF;
+	height: 25px;
+	padding-left: 5px;
+	top: 0;
+	width: 228px;
+	clear: both;
+	float: left;
+	left: 0;
+	position: absolute;
+	margin: 0 0 2px;	
+	padding-top: 5px;
+	font-size: 14px;	
+}
+
+#vouchers
+{
+	margin-top: 10px;	
+}
+
+#vouchers p
+{
+	margin-bottom: 4px;
+	margin-top: 4px;
+}
+
+#content.shoppingcart_checkout #toprow h1, #content.shoppingcart_revieworder #toprow h1
+{	
+	width: 40%;	
+	padding-top: 20px;
+}
+
+#content.shoppingcart_checkout #left-col
+{
+	width: 340px;
+}
+
+#content.shoppingcart_checkout #right-col
+{
+	width: 360px;
+}
+
+#progress-block
+{	
+	width: 520px;
+	float: right;	
+	position: relative;
+}
+
+#progress-block .progress-bar
+{
+    top:5px;
+	position: relative;
+	width: 380px;
+	float: right;
+}
+
+#progress-block .graphic
+{
+    height: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 25px;
+	padding-right: 20px;
+}
+
+#progress-block .steps
+{
+	width: 520px;
+}
+
+#progress-block .steps span
+{
+	display: block;
+	float: left;
+	width: 100px;
+	text-align: center;	
+	font-size: 11px;
+}
+
+#progress-block .steps span.selected
+{
+	font-weight: bold;
+}
+
+#progress-block .steps span.two
+{
+	padding-left: 50px;
+}
+
+#progress-block .steps span.three
+{
+	float: left;	
+	padding-right:10px;
+	padding-left: 50px;
+}
+
+#secure-logos
+{
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+form fieldset.nolegend
+{
+	background: none;
+	border: none;
+	padding-top: 20px;
+}
+
+#billing th
+{
+	text-align: left;
+}
+#billing td
+{
+	text-align: left;	
+}
+#billing span
+{
+	display: block;	
+}
+#billing th,
+#order-items th
+{
+    padding: 5px;
+}
+
+#order-items
+{	
+	border: solid 1px #E7E7E7;
+}
+
+#order-items tbody td
+{
+    border-width: 0px 0px 1px 0px;
+    border-color: #E7E7E7;
+    border-style: dotted;
+}
+#order-tabs
+{
+    font-weight: bold;
+}
+
+#order-items td
+{
+	text-align: center;	
+	border-bottom: solid 1px #E7E7E7;
+	background: #F7F7F7;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+#order-items td.first
+{
+    text-align: left;
+}
+#order-items td.even
+{
+    background: #FFFFFF;
+}
+.rewards, .rewards a
+{
+    color: #DE842D;
+}
+.promocd, .promocd a
+{
+    color: #BCA301;
+}
+.rewards a
+{
+    text-decoration: underline;
+}
+
+#order-items .order-tabs
+{
+	color: #1865B5;
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+#order-items .order-tabs a
+{
+	height: 16px;
+	color: #1865B5;
+}
+#order-items .order-tabs a.selected
+{
+	color: #003366;
+}
+
+#order-items .order-tabs a.not-selected
+{
+	font-weight: normal;
+}
+
+#order-items .order-tabs-item
+{
+	padding: 10px;
+	display: block;
+}
+
+
+#legal
+{
+	padding: 10px;
+	padding-top: 0px;
+	color: #333333;
+	width: 50%;
+}
+
+#order-items td.confirmation
+{
+	font-size: 12px;
+	
+	font-weight: bold;
+	color: #000000;	
+	border-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.confirmation span
+{
+	color: #DE842D;
+	
+}
+
+p.print a
+{
+    background-image: url('/images/icons/printer_icn.gif');
+    line-height: 24px;
+    text-indent: 21px;    
+    background-repeat: no-repeat;
+    background-position: left center;
+    display: block;
+    float: left;
+    clear: both;
+}
+p.print a:hover
+{
+    background-image: url('/images/icons/printer_icn_hover.gif');
+}
+
+.saved-cc input
+{
+	
+}

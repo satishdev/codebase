@@ -1,0 +1,160 @@
+[15-Jan-2013 03:34:53] PHP Fatal error:  Call to a member function select_where() on a non-object in /home8/wesporto/public_html/my_wesp/application/controllers/reserve_golfcourse.php on line 1047
+[15-Jan-2013 03:36:24] PHP Fatal error:  Call to a member function userdata() on a non-object in /home8/wesporto/public_html/my_wesp/application/controllers/search_golfcourse.php on line 312
+[15-Jan-2013 03:36:25] PHP Fatal error:  Call to a member function userdata() on a non-object in /home8/wesporto/public_html/my_wesp/application/views/header.php on line 34
+[15-Jan-2013 03:41:23] PHP Fatal error:  Call to a member function initialize() on a non-object in /home8/wesporto/public_html/my_wesp/application/controllers/teetime_golfcourse.php on line 144
+[15-Jan-2013 03:45:11] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home8/wesporto/public_html/my_wesp/application/controllers/search_golfcourse.php on line 767
+[15-Jan-2013 03:51:40] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home8/wesporto/public_html/my_wesp/application/controllers/search_golfcourse.php on line 767
+[15-Jan-2013 04:50:01] PHP Fatal error:  Call to a member function set_rules() on a non-object in /home8/wesporto/public_html/my_wesp/application/controllers/reserve_golfcourse.php on line 248
+[15-Jan-2013 06:01:13] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home8/wesporto/public_html/my_wesp/application/controllers/search_golfcourse.php on line 767
+[15-Jan-2013 06:02:03] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home8/wesporto/public_html/my_wesp/application/controllers/search_golfcourse.php on line 767
+[15-Jan-2013 06:03:46] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home8/wesporto/public_html/my_wesp/application/controllers/search_golfcourse.php on line 767
+[15-Jan-2013 06:11:26] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home8/wesporto/public_html/my_wesp/application/controllers/search_golfcourse.php on line 767
+[15-Jan-2013 06:11:31] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home8/wesporto/public_html/my_wesp/application/controllers/search_golfcourse.php on line 767
+[15-Jan-2013 06:14:35] PHP Fatal error:  Call to undefined method Home::formValidator() in /home8/wesporto/public_html/my_wesp/application/controllers/home.php on line 119
+[15-Jan-2013 06:18:14] PHP Fatal error:  Call to undefined method Home::formValidator() in /home8/wesporto/public_html/my_wesp/application/controllers/home.php on line 119
+[15-Jan-2013 06:19:07] PHP Fatal error:  Call to undefined method Home::formValidator() in /home8/wesporto/public_html/my_wesp/application/controllers/home.php on line 119
+[15-Jan-2013 06:19:44] PHP Fatal error:  Call to undefined method Home::formValidator() in /home8/wesporto/public_html/my_wesp/application/controllers/home.php on line 119
+[15-Jan-2013 06:20:31] PHP Fatal error:  Call to undefined method Home::formValidator() in /home8/wesporto/public_html/my_wesp/application/controllers/home.php on line 119
+[15-Jan-2013 06:20:58] PHP Fatal error:  Call to undefined method Home::formValidator() in /home8/wesporto/public_html/my_wesp/application/controllers/home.php on line 119
+[15-Jan-2013 06:22:29] PHP Fatal error:  Call to undefined method Home::formValidator() in /home8/wesporto/public_html/my_wesp/application/controllers/home.php on line 119
+[15-Jan-2013 06:23:06] PHP Fatal error:  Call to undefined method Home::formValidator() in /home8/wesporto/public_html/my_wesp/application/controllers/home.php on line 119
+[15-Jan-2013 06:38:49] PHP Fatal error:  Call to undefined method Home::formValidator() in /home8/wesporto/public_html/my_wesp/application/controllers/home.php on line 119
+[15-Jan-2013 06:39:20] PHP Fatal error:  Call to undefined method Home::formValidator() in /home8/wesporto/public_html/my_wesp/application/controllers/home.php on line 119
+[15-Jan-2013 06:39:25] PHP Fatal error:  Call to undefined method Home::formValidator() in /home8/wesporto/public_html/my_wesp/application/controllers/home.php on line 119
+[16-Jan-2013 14:52:27] PHP Fatal error:  Call to undefined method Schedule_model::players_details() in /home8/wesporto/public_html/my_wesp/application/models/schedule_model.php on line 169
+[16-Jan-2013 15:05:54] PHP Fatal error:  Call to undefined method Schedule_model::players_details() in /home8/wesporto/public_html/my_wesp/application/models/schedule_model.php on line 182
+[16-Jan-2013 15:10:29] PHP Fatal error:  Call to undefined method Schedule_model::players_details() in /home8/wesporto/public_html/my_wesp/application/models/schedule_model.php on line 182
+[16-Jan-2013 15:13:43] PHP Fatal error:  Call to undefined method Schedule_model::players_details() in /home8/wesporto/public_html/my_wesp/application/models/schedule_model.php on line 182
+[16-Jan-2013 15:14:40] PHP Fatal error:  Call to undefined method Schedule_model::players_details() in /home8/wesporto/public_html/my_wesp/application/models/schedule_model.php on line 182
+[17-Jan-2013 02:27:25] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home8/wesporto/public_html/my_wesp/application/controllers/search_golfcourse.php on line 767
+[17-Jan-2013 02:27:44] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home8/wesporto/public_html/my_wesp/application/controllers/search_golfcourse.php on line 767
+[17-Jan-2013 06:43:25] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home8/wesporto/public_html/my_wesp/application/controllers/search_golfcourse.php on line 767
+[17-Jan-2013 08:55:30] PHP Fatal error:  Can't use method return value in write context in /home8/wesporto/public_html/my_wesp/application/controllers/players.php on line 606
+[17-Jan-2013 08:55:32] PHP Fatal error:  Can't use method return value in write context in /home8/wesporto/public_html/my_wesp/application/controllers/players.php on line 606
+[17-Jan-2013 08:55:42] PHP Fatal error:  Can't use method return value in write context in /home8/wesporto/public_html/my_wesp/application/controllers/players.php on line 606
+[18-Jan-2013 09:38:51] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home8/wesporto/public_html/my_wesp/application/controllers/search_golfcourse.php on line 767
+[19-Jan-2013 13:51:27] PHP Fatal error:  Cannot use object of type stdClass as array in /home8/wesporto/public_html/my_wesp/application/controllers/search_golfcourse.php on line 418
+[19-Jan-2013 13:51:34] PHP Fatal error:  Cannot use object of type stdClass as array in /home8/wesporto/public_html/my_wesp/application/controllers/search_golfcourse.php on line 418
+[19-Jan-2013 13:51:41] PHP Fatal error:  Cannot use object of type stdClass as array in /home8/wesporto/public_html/my_wesp/application/controllers/search_golfcourse.php on line 418
+[21-Jan-2013 09:23:20] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home8/wesporto/public_html/my_wesp/application/controllers/search_golfcourse.php on line 767
+[22-Jan-2013 02:40:10] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home8/wesporto/public_html/my_wesp/application/controllers/search_golfcourse.php on line 767
+[22-Jan-2013 02:48:10] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home8/wesporto/public_html/my_wesp/application/controllers/search_golfcourse.php on line 767
+[29-Jan-2013 10:28:54] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/dd/application/controllers/search_golfcourse.php on line 767
+[29-Jan-2013 10:29:31] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/dd/application/controllers/search_golfcourse.php on line 767
+[29-Jan-2013 10:33:45] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/dd/application/controllers/search_golfcourse.php on line 767
+[29-Jan-2013 10:48:19] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/dd/application/controllers/search_golfcourse.php on line 767
+[29-Jan-2013 11:17:26] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/dd/application/controllers/search_golfcourse.php on line 767
+[29-Jan-2013 11:17:56] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/dd/application/controllers/search_golfcourse.php on line 767
+[29-Jan-2013 11:21:57] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/dd/application/controllers/search_golfcourse.php on line 767
+[29-Jan-2013 11:37:28] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/dd/application/controllers/search_golfcourse.php on line 767
+[05-Feb-2013 02:17:35] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home2/wesporto/public_html/wesp/application/views/players/advteetimes.php on line 62
+[05-Feb-2013 03:48:21] PHP Parse error:  syntax error, unexpected $end in /home2/wesporto/public_html/wesp/application/views/common/menu_items_new.php on line 30
+[05-Feb-2013 04:30:06] PHP Parse error:  syntax error, unexpected $end in /home2/wesporto/public_html/wesp/application/views/common/menu_items_new.php on line 238
+[05-Feb-2013 04:31:46] PHP Parse error:  syntax error, unexpected $end in /home2/wesporto/public_html/wesp/application/views/common/menu_items_new.php on line 99
+[05-Feb-2013 05:22:32] PHP Fatal error:  Call to a member function result() on a non-object in /home2/wesporto/public_html/wesp/application/controllers/players.php on line 750
+[05-Feb-2013 05:23:32] PHP Fatal error:  Call to a member function result() on a non-object in /home2/wesporto/public_html/wesp/application/controllers/players.php on line 690
+[05-Feb-2013 05:25:54] PHP Fatal error:  Call to a member function result() on a non-object in /home2/wesporto/public_html/wesp/application/controllers/players.php on line 690
+[05-Feb-2013 05:34:11] PHP Fatal error:  Call to a member function result() on a non-object in /home2/wesporto/public_html/wesp/application/controllers/players.php on line 707
+[05-Feb-2013 05:34:37] PHP Fatal error:  Call to a member function result() on a non-object in /home2/wesporto/public_html/wesp/application/controllers/players.php on line 767
+[05-Feb-2013 05:36:09] PHP Fatal error:  Call to a member function result() on a non-object in /home2/wesporto/public_html/wesp/application/controllers/players.php on line 707
+[05-Feb-2013 05:36:55] PHP Fatal error:  Call to a member function result() on a non-object in /home2/wesporto/public_html/wesp/application/controllers/players.php on line 707
+[05-Feb-2013 05:38:56] PHP Fatal error:  Call to a member function result() on a non-object in /home2/wesporto/public_html/wesp/application/controllers/players.php on line 707
+[05-Feb-2013 05:44:03] PHP Fatal error:  Call to a member function result() on a non-object in /home2/wesporto/public_html/wesp/application/controllers/players.php on line 707
+[05-Feb-2013 05:44:07] PHP Fatal error:  Call to a member function result() on a non-object in /home2/wesporto/public_html/wesp/application/controllers/players.php on line 707
+[05-Feb-2013 05:44:55] PHP Fatal error:  Call to a member function result() on a non-object in /home2/wesporto/public_html/wesp/application/controllers/players.php on line 707
+[05-Feb-2013 06:41:51] PHP Parse error:  syntax error, unexpected $end in /home2/wesporto/public_html/wesp/application/views/common/menu_items_new.php on line 238
+[05-Feb-2013 06:50:15] PHP Parse error:  syntax error, unexpected $end in /home2/wesporto/public_html/wesp/application/views/common/menu_items_new.php on line 140
+[05-Feb-2013 07:42:36] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/wesp/application/controllers/search_golfcourse.php on line 767
+[05-Feb-2013 08:00:37] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home2/wesporto/public_html/wesp/application/config/routes.php on line 44
+[05-Feb-2013 08:00:43] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home2/wesporto/public_html/wesp/application/config/routes.php on line 44
+[05-Feb-2013 08:00:56] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home2/wesporto/public_html/wesp/application/config/routes.php on line 44
+[05-Feb-2013 08:02:08] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home2/wesporto/public_html/wesp/application/config/routes.php on line 44
+[05-Feb-2013 13:38:24] PHP Fatal error:  Uncaught SoapFault exception: [HTTP] Could not connect to host in /home2/wesporto/public_html/wesp/application/controllers/search_golfcourse.php:223
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'https://devxml....', 'http://xml.golf...', 1, 0)
+#1 /home2/wesporto/public_html/wesp/application/controllers/search_golfcourse.php(223): SoapClient->__call('CourseList', Array)
+#2 /home2/wesporto/public_html/wesp/application/controllers/search_golfcourse.php(223): SoapClient->CourseList(Array)
+#3 /home2/wesporto/public_html/wesp/system/core/CodeIgniter.php(339): Search_golfcourse->area_change()
+#4 /home2/wesporto/public_html/wesp/index.php(200): require_once('/home2/wesporto...')
+#5 {main}
+  thrown in /home2/wesporto/public_html/wesp/application/controllers/search_golfcourse.php on line 223
+[05-Feb-2013 22:41:50] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/wesp/application/controllers/search_golfcourse.php on line 767
+[05-Feb-2013 23:07:28] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/wesp/application/controllers/search_golfcourse.php on line 767
+[05-Feb-2013 23:23:46] PHP Parse error:  syntax error, unexpected '}' in /home2/wesporto/public_html/wesp/application/controllers/reserve_golfcourse.php on line 99
+[05-Feb-2013 23:23:58] PHP Parse error:  syntax error, unexpected '}' in /home2/wesporto/public_html/wesp/application/controllers/reserve_golfcourse.php on line 99
+[05-Feb-2013 23:24:02] PHP Parse error:  syntax error, unexpected '}' in /home2/wesporto/public_html/wesp/application/controllers/reserve_golfcourse.php on line 99
+[05-Feb-2013 23:24:08] PHP Parse error:  syntax error, unexpected '}' in /home2/wesporto/public_html/wesp/application/controllers/reserve_golfcourse.php on line 99
+[05-Feb-2013 23:24:56] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/wesp/application/controllers/search_golfcourse.php on line 767
+[05-Feb-2013 23:24:59] PHP Parse error:  syntax error, unexpected '}' in /home2/wesporto/public_html/wesp/application/controllers/reserve_golfcourse.php on line 99
+[05-Feb-2013 23:27:07] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/wesp/application/controllers/search_golfcourse.php on line 767
+[05-Feb-2013 23:34:13] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/wesp/application/controllers/search_golfcourse.php on line 767
+[05-Feb-2013 23:46:42] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/wesp/application/controllers/search_golfcourse.php on line 767
+[06-Feb-2013 00:01:02] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/wesp/application/controllers/search_golfcourse.php on line 767
+[06-Feb-2013 00:11:47] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/wesp/application/controllers/search_golfcourse.php on line 767
+[06-Feb-2013 00:15:56] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/wesp/application/controllers/search_golfcourse.php on line 767
+[06-Feb-2013 00:16:40] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/wesp/application/controllers/search_golfcourse.php on line 767
+[06-Feb-2013 00:20:55] PHP Fatal error:  Call to undefined method CI_Pagination::ajax_create_links() in /home2/wesporto/public_html/wesp/application/controllers/search_golfcourse.php on line 767
+[06-Feb-2013 01:07:53] PHP Parse error:  syntax error, unexpected $end in /home2/wesporto/public_html/wesp/application/views/menu_items_new.php on line 185
+[06-Feb-2013 01:17:16] PHP Fatal error:  Call to a member function getuserid() on a non-object in /home2/wesporto/public_html/wesp/application/controllers/reserve_golfcourse.php on line 273
+[06-Feb-2013 01:21:28] PHP Fatal error:  Call to a member function row() on a non-object in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 23
+[06-Feb-2013 01:29:17] PHP Fatal error:  Call to a member function row() on a non-object in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 23
+[06-Feb-2013 01:29:19] PHP Fatal error:  Call to a member function row() on a non-object in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 23
+[06-Feb-2013 01:36:36] PHP Fatal error:  Call to a member function row() on a non-object in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 23
+[06-Feb-2013 04:49:29] PHP Parse error:  syntax error, unexpected $end in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 195
+[06-Feb-2013 07:24:30] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 54
+[06-Feb-2013 07:24:33] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 54
+[06-Feb-2013 07:25:04] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 54
+[06-Feb-2013 07:25:25] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 54
+[06-Feb-2013 07:34:07] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 55
+[06-Feb-2013 07:34:18] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 55
+[06-Feb-2013 07:49:02] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 55
+[06-Feb-2013 07:49:04] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 55
+[06-Feb-2013 07:51:42] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 55
+[06-Feb-2013 07:56:29] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 55
+[06-Feb-2013 07:56:52] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 59
+[06-Feb-2013 08:03:45] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 59
+[06-Feb-2013 08:26:30] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 52
+[06-Feb-2013 08:26:36] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 52
+[06-Feb-2013 08:27:16] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 52
+[06-Feb-2013 08:28:23] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 52
+[06-Feb-2013 08:28:41] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 52
+[06-Feb-2013 08:28:51] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 52
+[06-Feb-2013 08:33:09] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 52
+[06-Feb-2013 08:33:12] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 52
+[06-Feb-2013 08:33:25] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 52
+[06-Feb-2013 08:33:28] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 52
+[06-Feb-2013 08:34:22] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 52
+[06-Feb-2013 08:34:26] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 52
+[06-Feb-2013 08:38:37] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 52
+[06-Feb-2013 08:38:39] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 52
+[06-Feb-2013 08:42:38] PHP Parse error:  syntax error, unexpected T_OBJECT_OPERATOR in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 52
+[06-Feb-2013 12:23:28] PHP Fatal error:  Call to a member function getuserid() on a non-object in /home2/wesporto/public_html/wesp/application/controllers/reserve_golfcourse.php on line 1234
+[07-Feb-2013 02:17:33] PHP Fatal error:  Can't use method return value in write context in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 583
+[07-Feb-2013 02:17:42] PHP Fatal error:  Can't use method return value in write context in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 583
+[07-Feb-2013 02:22:03] PHP Fatal error:  Can't use method return value in write context in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 583
+[07-Feb-2013 02:22:06] PHP Fatal error:  Can't use method return value in write context in /home2/wesporto/public_html/wesp/application/views/shipping_form.php on line 583
+[07-Feb-2013 05:39:21] PHP Fatal error:  Call to a member function getuserid() on a non-object in /home2/wesporto/public_html/wesp/application/controllers/reserve_golfcourse.php on line 608
+[08-Feb-2013 01:31:22] PHP Fatal error:  Uncaught SoapFault exception: [HTTP] Could not connect to host in /home2/wesporto/public_html/wesp/application/controllers/teetime_golfcourse.php:1607
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'https://devxml....', 'http://xml.golf...', 1, 0)
+#1 /home2/wesporto/public_html/wesp/application/controllers/teetime_golfcourse.php(1607): SoapClient->__call('Areas', Array)
+#2 /home2/wesporto/public_html/wesp/application/controllers/teetime_golfcourse.php(1607): SoapClient->Areas(Array)
+#3 /home2/wesporto/public_html/wesp/system/core/CodeIgniter.php(339): Teetime_golfcourse->dropdown_teetime()
+#4 /home2/wesporto/public_html/wesp/index.php(200): require_once('/home2/wesporto...')
+#5 {main}
+  thrown in /home2/wesporto/public_html/wesp/application/controllers/teetime_golfcourse.php on line 1607
+[08-Feb-2013 01:48:43] PHP Parse error:  syntax error, unexpected '}' in /home2/wesporto/public_html/wesp/application/views/course_listing_left_menu.php on line 613
+[08-Feb-2013 01:48:51] PHP Parse error:  syntax error, unexpected '}' in /home2/wesporto/public_html/wesp/application/views/course_listing_left_menu.php on line 613
+[08-Feb-2013 02:05:04] PHP Fatal error:  Uncaught SoapFault exception: [HTTP] Could not connect to host in /home2/wesporto/public_html/wesp/application/views/course_listing_left_menu.php:712
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest('<?xml version="...', 'https://devxml....', 'http://xml.golf...', 1, 0)
+#1 /home2/wesporto/public_html/wesp/application/views/course_listing_left_menu.php(712): SoapClient->__call('CourseAvailList', Array)
+#2 /home2/wesporto/public_html/wesp/application/views/course_listing_left_menu.php(712): SoapClient->CourseAvailList(Array)
+#3 /home2/wesporto/public_html/wesp/system/core/Loader.php(744): include('/home2/wesporto...')
+#4 /home2/wesporto/public_html/wesp/system/core/Loader.php(340): CI_Loader->_ci_load(Array)
+#5 /home2/wesporto/public_html/wesp/application/views/specific_course_avail_listing.php(151): CI_Loader->view('course_listing_...')
+#6 /home2/wesporto/public_html/wesp/system/core/Loader.php(744): include('/home2/wesporto...')
+#7 /home2/wesporto/public_html/wesp/system/core/Loader.php(340): CI_L in /home2/wesporto/public_html/wesp/application/views/course_listing_left_menu.php on line 712
+[08-Feb-2013 05:46:57] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home2/wesporto/public_html/wesp/application/views/my_booking_history_listing.php on line 15
+[08-Feb-2013 05:47:11] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home2/wesporto/public_html/wesp/application/views/my_booking_history_listing.php on line 15
+[08-Feb-2013 06:28:15] PHP Fatal error:  Call to a member function listofmysports() on a non-object in /home2/wesporto/public_html/wesp/application/controllers/reserve_golfcourse.php on line 1282

@@ -1,0 +1,447 @@
+﻿
+form fieldset 
+{
+	position: relative;
+	background-image: url(/images/common/mod_background_2.gif);
+	background-repeat: repeat-x;
+	background-position: center top;
+    border: 1px solid #E3E3E3;
+    padding-top: 8px;  
+    margin-bottom: 10px;  
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+form h2
+{   
+	margin-bottom: 10px; 
+}
+
+form fieldset h2
+{
+	
+}
+
+form fieldset.clean
+{
+	border: none;
+	background-image: none;
+	padding-top: 0px;
+}
+
+form.mod fieldset
+{
+	border: none;
+	background-image: none;
+}
+
+form label
+{
+  color: #000000;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.8;
+  margin-right: 5px;
+  text-align: right;
+  vertical-align: top;
+}
+
+.mod.formish span.postcolon, label.postcolon 
+{
+    text-align:left;
+    font-weight:normal;
+}
+
+form fieldset ol, .mod.formish ol 
+{
+  margin: 0;
+  padding: 0;
+}
+
+form fieldset li, .mod.formish li 
+{
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+  padding-left: 0px;
+}
+
+form em {
+  font-weight: bold;
+  font-style: normal;
+  color: #f00;
+}
+
+form label.separator, .mod.formish span.separator
+{
+	width: 75%;
+	display: block;
+	text-align: left;
+	font-weight: normal;
+	color: #7C818C;
+	border-bottom: dotted 1px #CCCCCC;
+}
+
+input[type="submit"].centered
+{
+	float: none!important;
+	margin-right: auto!important;
+	margin-left: auto!important;
+	display: block!important;
+}
+
+label
+{
+    color: #444444;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: bold;	
+}
+
+label.small
+{
+	font-size: 11px;
+}
+
+label.xshort {
+  width: 100px;
+}
+
+label.xxshort {
+  width: 75px; 
+}
+
+label.short {
+  width: 140px; 
+}
+
+.number
+{
+	width: 50px;
+}
+
+label.shortx
+{
+  width: 120px;
+}
+
+label.shortxx {
+  width: 140px;
+}
+
+label.shortxxx {
+  width: 160px;
+}
+
+form label.medium, .mod.formish span.medium 
+{
+  width: 200px; 
+}
+
+form label.xmedium, .mod.formish span.xmedium 
+{
+  width: 300px; 
+}
+
+form label.long, .mod.formish label.long 
+{
+  width: 450px; 
+}
+
+form label.full, .mod.formish label.full 
+{
+  width: 100%; 
+}
+
+input[type="text"].full
+{
+	width: 98%;
+}
+
+form .caption
+{    
+}
+
+form .dependant
+{
+    display: none;
+}
+
+
+input[type=text], input[type=password], textarea, select
+{
+    background: url('/images/common/input_bg.gif') #FFFFFF repeat-x;
+    border: 1px solid #D1DDEF;
+}
+
+form.big input[type=text], form.big input[type=password], input[type=text].big, input[type=password].big
+{
+	font-size: 13px;
+	height: 23px;
+	padding-left: 3px;
+    background: url('/images/common/input_big_bg.gif') #FFFFFF repeat-x;
+    color: #7D828E;
+}
+
+form.big select, select.big
+{
+	font-size: 16px;
+	height: 26px;	
+}
+
+form.large select, form.large input[type="text"]
+{
+    border: 1px solid #DE842D;
+    color: #9C9A9C;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin-top: -1px;
+    width: 350px;
+}
+
+form.large select
+{
+	height: 24px;
+}
+
+form.large input[type="submit"] 
+{
+    margin-left: 10px;
+    height: 24px;
+}
+
+form span.block-separator
+{
+	display: inline-block;
+	float: left;
+	padding-right: 5px;
+}
+
+input[type=radio]
+{
+}
+
+input[type=checkbox]
+{
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus
+{
+    background: url('/images/common/input_bg_focus.gif') #DDDDDD repeat-x;
+}
+input[type=text].big:focus,
+input[type=password].big:focus,
+textarea:focus.big
+select.big
+{
+      background: url('/images/common/input_big_bg_focus.gif') #DDDDDD repeat-x;
+}
+
+select
+{	
+    font-family: Arial;
+}
+select[multiple=multiple]
+{
+	min-width: 150px;
+	min-height: 200px;
+	display: block;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+
+.required
+{
+    font-weight: bold;
+    color: red;
+}
+
+label.big
+{
+	font-size: 13px;
+}
+
+button, input[type=button], input[type=submit]
+{
+    cursor: pointer;
+    height:28px;
+    font-family:arial,helvetica;
+    font-size:12px;
+    font-weight:bold;
+    text-align: center;
+    text-decoration: none;
+    line-height: 23px;
+    padding-bottom: 2px;
+    background-color:#0F4275;
+    background-image:url(/images/common/blue-button.gif);
+    background-repeat:repeat-x;    
+    border-top: solid 1px #2B5E91;
+    border-left: solid 1px #2B5E91;
+    border-right: solid 1px #002C5F;
+    border-bottom: solid 1px #002C5F;
+    color:#FFFFFF;
+}
+
+button:hover, input[type=button]:hover, input[type=submit]:hover, a.button:hover {
+    background-color:#124578;
+    background-image:url(/images/common/blue-button-hover.gif);
+    color: #E7E7E7;
+}
+
+button.urgent, input[type=button].urgent, input[type=submit].urgent, a.button.urgent
+{
+    background-color:#DE842D;
+    background-image:url(/images/common/orange-button.gif);    
+    border-top: solid 1px #FFA00D;
+    border-left: solid 1px #FFA00D;
+    border-right: solid 1px #D46E00;
+    border-bottom: solid 1px #D46E00;
+}
+
+button:hover.urgent, input[type=button]:hover.urgent, input[type=submit]:hover.urgent, a.button.urgent:hover
+{
+    background-color:#D46E0D;
+    background-image:url(/images/common/orange-button-hover.gif);
+    color: #FFFFFF;
+}
+
+form.big button, form.big input[type=button], form.big input[type=submit], button.urgent.big, input[type=button].urgent.big, input[type=submit].urgent.big
+{
+	font-size: 14px;
+	height: 32px;
+    font-family:arial,helvetica;    
+    font-weight:bold;
+    text-align: center;
+    text-decoration: none;
+    line-height: 25px;
+}
+
+form.large button, form.large input[type=button], form.large input[type=submit], button.urgent.large, input[type=button].urgent.large, input[type=submit].urgent.large
+{
+	font-size: 16px;
+	height:30px;
+    font-family:arial,helvetica;    
+    font-weight:bold;
+    text-align: center;
+    text-decoration: none;
+    line-height: 25px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 0px;
+}
+
+form.large button.inline, form.large input.inline[type=button], form.large input.inline[type=submit], button.large.inline, input[type=button].large.inline, input[type=submit].large.inline
+{
+	font-size: 15px;
+	height: 24px;
+}
+
+button.inline, input[type=button].inline, input[type=submit].inline
+{
+    height: 20px;
+    font-size: 11px;
+    margin-left: -2px;
+}
+
+button.inline-medium, input[type=button].inline-medium, input[type=submit].inline-medium
+{
+    height: 26px;
+    font-size: 12px;
+    margin-left: 0px;
+    padding-top: 0px;
+    margin-top: 1px;
+}
+
+button.tiny, input[type=button].tiny, input[type=submit].tiny
+{
+    background-color: #EDEDED;
+    background-image: none;
+    display: inline;
+    height: 21px;
+    font-size: 9px;
+    color: #585858;
+    border-bottom: 1px solid #ABBBBB;
+    border-right: 1px solid #ABBBBB;
+    border-top: 1px solid #8D96AB;
+    border-left: 1px solid #8D96AB;
+}
+
+button.urgent.tiny, 
+input[type=button].urgent.tiny, 
+input[type=submit].urgent.tiny
+{
+    background-color: Transparent;
+    background-image:url('/images/buttons/orange_small.gif');
+    background-repeat: no-repeat;
+    border: none;
+    display: inline;
+    height: 21px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    height: 24px;
+    width: 30px;
+}
+
+button:hover.urgent.tiny, 
+input[type=button]:hover.urgent.tiny, 
+input[type=submit]:hover.urgent.tiny
+{
+    background-image:url('/images/buttons/orange_small_hover.gif');
+}
+
+button.remove, input[type=button].remove, input[type=submit].remove
+{
+    font-weight: normal;
+    font-size: 11px;
+    background-color: Transparent;
+    background-image:url('/images/icons/remove.gif');
+    background-repeat:no-repeat;
+    background-position: 0px 8px;
+    padding-left: 16px;
+    padding-right: 0px;
+    border: none;
+    color:#AAAAAA;
+}
+
+button.remove:hover, input[type=button].remove:hover, input[type=submit].remove:hover
+{
+    background-image:url(/images/icons/remove.gif);
+    color: red;
+}
+
+button.secure, input[type=button].secure, input[type=submit].secure
+{
+    border: 1px solid #FF9900;
+    background-color: #ce6531;  
+    background-image:url(/images/common/checkout-button.gif)!important;
+    background-repeat:no-repeat;  
+    padding-left: 16px;     
+}
+
+button.secure:hover, input[type=button].secure:hover, input[type=submit].secure:hover
+{
+    background-image:url(/images/common/checkout-button-hover.gif);
+}
+
+button.secure.inprogress, input[type=button].secure.inprogress, input[type=submit].secure.inprogress
+{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.text-box-bar
+{
+	padding-top: 4px;
+}
+
+

@@ -1,0 +1,1 @@
+<div class='ads'><a href="#"><img src="<?php echo site_url('images/ctv-sports.jpg'); ?>" alt="To post ads click here" /></a></div>

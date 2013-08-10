@@ -1,0 +1,163 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*start: styles for notifications*/
+.notifications .msg_item{
+    height: auto;
+	padding: 20px 10px;
+	position: relative;
+	border-bottom: 1px dotted #AAA;
+}
+.notifications.multi-selection .u_select{
+	position: absolute;
+	left: 10px;
+	top: 50%;
+}
+.notifications .msg_item .u_icn{
+	width: 60px;
+	height: 60px;
+	padding: 5px;
+	border: 1px solid #EEE;
+	position: absolute;
+	left: 10px;
+	top: 15px;
+}
+.notifications.multi-selection .msg_item .u_icn{
+	left: 35px;
+}
+.notifications .msg_data{
+	margin-left: 85px;
+	position: relative;
+}
+.notifications.multi-selection .msg_data{
+	margin-left: 110px;
+}
+.notifications .u_name{
+	color: #06B;
+	font-weight: bold;
+	text-shadow: 0 1px #FFF;
+}
+.notifications .u_f_count{
+	font-size: 10px;
+    margin-bottom: 10px;
+}
+.notifications .u_msg{
+	color: #666;
+}
+.notifications .msg_actions{
+	position: relative;
+	margin-top: 5px;
+}
+.notifications .n_actions{
+	position: relative;
+}
+.notifications .n_actions .act_wrap{
+	float: left;
+	margin-right: 10px;
+}
+.notifications  .n_actions .act_wrap.center_wrap{
+	top: -70px;
+	left: 275px;
+	position: absolute;
+}
+.notifications .n_actions .act_wrap.center_wrap_all{
+	top: -50px;;
+	left: 275px;
+	position: absolute;
+}
+.notifications .n_actions .act_wrap .n_act{
+	border: 1px solid #B3B3B3;
+	display: block;
+	padding: 2px 20px;
+	line-height: 18px;
+	background: #F0F0F0;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+.notifications .n_actions .act_wrap .n_act.main{
+	background: #E2F0F9;
+	border: 1px solid #64B0D4;
+}
+.notifications .n_actions .act_wrap .relation_list{
+	background: #FFFFFF;
+    border: 1px solid #666666;    
+    display: none;
+    position: absolute;
+    top: 37px;
+	-moz-box-shadow: 0 1px 3px #888;
+	-webkit-box-shadow: 0 1px 3px #888;
+	box-shadow: 0 1px 3px #888;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	z-index: 10;
+}
+.notifications .relation_list .rel-item{
+	display: block;
+    padding: 2px 10px;
+}
+.notifications .tip .shade{
+	border-color: transparent transparent #AAAAAA;
+    border-style: solid;
+    border-width: 14px;
+    left: 50%;
+    margin-left: -17px;
+    position: absolute;
+    top: -28px;
+}
+.notifications .tip .bg{
+	border-color: transparent transparent #FFFFFF;
+    border-style: solid;
+    border-width: 12px;
+    left: 50%;
+    margin-left: -15px;
+    position: absolute;
+    top: -24px;
+}
+.notifications .more{
+	text-align: right;
+}
+/*end: styles for notifications*/
+
+.pl_sports_info .pl_sports_hdr{
+	background: #00AAFF;
+	height: 26px;
+	line-height: 26px;
+	 background: url("images/headers_sprite.png") repeat-x scroll 0 0 #BAC2CA;
+    border-bottom: 1px solid #EBEBEB;
+
+	
+}
+.pl_sports_info .pl_sports_data{
+    overflow-x: hidden;
+    overflow-y: hidden;
+/*  position: absolute;
+	bottom: 0;
+    left: 0;
+    right: 0;
+    top: 28px;*/
+}
+.pl_sports_info .pl_sports_list .s_row{
+	border-bottom: 1px solid #DDDDDD;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+}
+.pl_sports_info .pl_s_name{
+	float: left;
+    overflow: hidden;
+    padding-left: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 200px;
+}
+.pl_sports_info .pl_ex_level{
+	float: right;
+    text-align: center;
+    width: 140px;
+}
+.pl_sports_info{
+max-height:300px;
+overflow:auto !important;
+}

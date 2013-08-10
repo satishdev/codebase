@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*start: styles for forms*/
+.wesp-form li, .wesp-form .li{
+	display: block;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.wesp-form li.overflow{
+	clear: both;
+	overflow: visible;
+}
+.wesp-form .frm-btns{
+	text-align: right;
+	margin: 10px;
+}
+.wesp-form li label{
+	float: left;
+    margin-right: 20px;
+    text-align: right;
+    vertical-align: top;
+    width: 160px;
+}
+.wesp-form.small li label{
+	width: 120px;
+}
+.wesp-form li .field{
+	float: left;
+    padding: 3px;
+    width: 260px;
+	border:1px solid #999;
+}
+.wesp-form.small li .field{
+	width: 150px;
+}
+.wesp-form li .field.no-b{
+	border: 0 none;
+	padding: 0;
+}
+.wesp-form li select.field{
+	width: 268px;
+}
+.wesp-form li textarea{
+	width: 260px;
+	padding: 3px;
+}
+.wesp-form li.no-lbl{
+	padding-left: 181px;
+}
+.wesp-form li.no-lbl label{
+	float: none;
+    left: 4px;
+    position: relative;
+    top: -1px;
+}
+.custom-list{
+	display: none;
+	margin-top: 10px;
+}
+.custom-list-sports{
+	display: none;
+	margin-top: 10px;
+}
+/*end: styles for forms*/
+
+
+.m_data_spin{
+	display: none;
+	position: absolute;
+    right: 120px;
+    top: 1px;
+}

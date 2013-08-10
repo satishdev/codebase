@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*start: styles for profile*/
+.team_profile{
+	height: 500px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.left_nav .profile_image{
+	border-bottom: 1px solid #EBEBEB;
+	padding: 15px;
+	position: relative;
+    -webkit-box-shadow: inset 0 0 10px #DDDDDD;
+	-moz-box-shadow: inset 0 0 10px #DDDDDD;
+	box-shadow: inset 0 0 10px #DDDDDD;
+	
+	-webkit-transition: -webkit-box-shadow 200ms ease-out;
+	-moz-transition: -moz-box-shadow 200ms ease-out;
+	transition: box-shadow 200ms ease-out;
+}
+.profile_image img {
+  /*  border: 1px solid #9B9B9B;*/
+    -webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+  /*  -webkit-box-shadow: 0 0 8px #6B6B6B;
+	-moz-box-shadow: 0 0 8px #6B6B6B;
+	box-shadow: 0 0 8px #6B6B6B;*/
+    display: block;
+    margin: 0 auto;
+	
+	padding: 5px;
+	border: 1px solid #BABABA;
+	background-color: #EFEFEF;
+	-webkit-box-shadow: 0 0 5px #9E9E9E inset;
+	-moz-box-shadow: 0 0 5px #9E9E9E inset;
+	box-shadow: 0 0 5px #9E9E9E inset;
+}
+.profile_image:hover img{
+	-webkit-box-shadow: 0 0 8px #6B6B6B;
+	-moz-box-shadow: 0 0 8px #6B6B6B;
+	box-shadow: 0 0 8px #6B6B6B;
+}
+.profile_image a.t-act{	
+	/*position: absolute;
+	top: 98px;
+	left: 26px;
+	right: 24px;
+	-webkit-border-radius: 0 0 3px 3px;
+	-moz-border-radius: 0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+	*/
+	position: absolute;
+	top: 93px;
+	left: 25px;
+	right: 25px;
+	background: none repeat scroll 0 0 #AEB9C5;
+	color: white;
+	display: none;
+	font-size: 12px;
+	padding: 4px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	text-align: center;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.profile_image:hover a.t-act{
+	display: block;
+	opacity: .9;
+	filter: alpha(opacity=90);
+}
+.panel_header{
+	border-bottom: 1px solid #EBEBEB;
+    font-size: 14px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 33px;
+    padding-left: 10px;
+}
+.profile_rows{
+    border-bottom: 1px none #EBEBEB;
+    padding: 5px;
+    min-height: 130px;
+    position: relative;
+}
+.profile_rows .profile_gallery .image_wraper{
+	float: left;
+	margin: 5px;
+}
+.profile_rows .profile_gallery .image_wraper .img_support{
+	height: 80px;
+	width: 80px;
+}
+.profile_rows .profile_gallery .image_wraper img{
+	border: 1px solid #CCC;
+	color: #333;
+	display: block;
+	text-align: center;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.profile_rows .profile_gallery .image_wraper .rel_name{
+    font-weight: bold;
+    margin-top: 3px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-shadow: 0 1px #FFFFFF;
+    white-space: nowrap;
+    width: 80px;
+}
+.profile_rows .profile_gallery .image_wraper .rel_name a{
+    color: #1C6287;
+}
+.profile_rows .profile_gallery .rel_name_add{
+    bottom: 0;
+    height: 30px;
+    left: 0;
+    line-height: 30px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+}
+.profile_rows .profile_gallery .rel_name_add_join{
+    bottom: 0;
+    height: 50px;
+    left: 0;
+    line-height: 30px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+}
+.profile_rows .gallery_links{
+	padding-right: 5px;
+	text-align: right;
+}
+.profile_rows .gallery_links a{
+	color: #0b3f5a;
+}
+.team_request_spin{
+    position: absolute;
+    right: 13px;
+    top: 7px;
+    display: none;
+}
+.tr_status{
+    font-size: 14px;
+    position: absolute;
+    top: 4px;
+    right: 12px;
+}
+#table-3 {
+	/*border: 1px solid #DFDFDF;*/
+	background-color: #F9F9F9;
+	width: 100%;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	font-family: Arial,"Bitstream Vera Sans",Helvetica,Verdana,sans-serif;
+	color: #333;
+}
+#table-3 td, #table-3 th {
+	border-top-color: white;
+	border-bottom: 1px solid #DFDFDF;
+	color: #555;
+}
+#table-3 th {
+	text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	padding: 7px 7px 8px;
+	text-align: left;
+	line-height: 1.3em;
+	font-size: 14px;
+}
+#table-3 td {
+	font-size: 12px;
+	padding: 4px 7px 2px;
+	vertical-align: top;
+}
+/*end: styles for profile*/
