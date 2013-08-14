@@ -175,7 +175,8 @@ Destination
                     $countryArr = $countryArr->result();
                     ?>
                     <select name="country_id" id="country_id" onChange="country_change(this.value,2)">
-                        <? for ($i = 0; $i < count($countryArr); $i++) {
+                        <option value="0">Select Country</option>
+						<? for ($i = 0; $i < count($countryArr); $i++) {
                             $select = 0;
                             $country_id = $this->session->userdata('country_id');
                             if ($country_id == $countryArr[$i]->id) {
@@ -246,7 +247,8 @@ Destination
                                     $sess_date = time();
                                     $this->session->set_userdata('fin_date', $sess_date);
                                 }
-                                $sess_date = date('m/d/Y', $sess_date);
+                                //$sess_date = date('m/d/Y', $sess_date);
+								$sess_date = date('m/d/Y');
                                 ?>
 
                                 <input type="text" name="datepicker" id="datepicker" value="<?= @$sess_date ?>"
