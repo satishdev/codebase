@@ -115,7 +115,7 @@ class Login extends CI_Controller
     {
         $this->db_session->sess_destroy();
         delete_cookie("remember_me_token");
-        redirect('login');
+        redirect('home');
     }
 }
 

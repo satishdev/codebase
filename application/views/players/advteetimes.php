@@ -180,7 +180,7 @@ Destination
                             $select = 0;
                             $country_id = $this->session->userdata('country_id');
                             if ($country_id == $countryArr[$i]->id) {
-                                $select = 1;
+                                //$select = 1;
 
                             }?>
                             <option <? if ($select == 1) { ?> selected="selected" <? } ?>
