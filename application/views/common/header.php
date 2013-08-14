@@ -14,7 +14,7 @@
 
                     <div class="flds fl">
 
-                        <label>Email</label>
+                        <label>Email ID</label>
 
                         <input type="text" id="uname" name="uname" class="text"/>
 

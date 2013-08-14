@@ -670,7 +670,7 @@ $(document).ready(function () {
 				<input type="hidden" name="hid_area_id" id="hid_area_id"  		value="Phoenix Northeast<?php //$this->session->userdata('area_id')?>"/>
 				<div class="pos_rel">
                     <label>
-                        <div>Player:</div>
+                        <div>Golf Club:</div>
                         <input type="text" onkeyup="auto_complete()" autocomplete="off" id="serchKey" value="<?= @$serchKey ?>"
                                class="input_long"></label>
                     <input type="hidden" name="my_course_id" id="my_course_id" value=""/>
@@ -697,7 +697,7 @@ $(document).ready(function () {
 
                     <div class="players fl">
                         <label>
-                            <div>Destination:</div>
+                            <div>Player :</div>
                             <select name="my_players" class="select_fld" id="Players">
                                 <option>Select</option>
                                 <option>1</option>
@@ -856,7 +856,7 @@ $(document).ready(function () {
                 <label><input type="text" class="form-box" placeholder="Last Name" id="last_name"
                               name="last_name"/></label>
                 <label><input type="text" class="form-box form-box-two" id="email" name="email"
-                              placeholder="Your Email"/></label>
+                              placeholder="Your Email ID"/></label>
                 <!--<label><input type="text" class="form-box form-box-two" placeholder="Re-enter Email" /></label>-->
                 <label><input type="password" id="password" name="password" class="form-box form-box-two"
                               placeholder="Password"/></label>
