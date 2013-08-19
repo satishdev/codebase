@@ -92,6 +92,10 @@ $('#join_team_in_profile').die('click').live('click', function(){
             $('#team_request_spin').fadeOut(function(){
                 $('#team_request_status').html("<span class='tr_status'>Pending Request</span>");
             });
+            if(me.hasClass('jtmprf'))
+            {
+                window.location.reload();
+            }
             me.remove();
         }
     });

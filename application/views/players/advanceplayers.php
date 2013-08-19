@@ -4,7 +4,7 @@
 	<div class='hdr-text'>Players</div>
 </div>
 
-<div id="content_wrapper" class="contacts">
+<div id="content_wrapper" class="contacts players">
 		
     <div class="opt_box_wrapper">
     <form id="appl_form" method="post" action="<?php echo site_url('players/advanceplayers');?>" name="appl_form">

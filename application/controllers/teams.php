@@ -270,6 +270,7 @@ function edit_teams($id=0) {
 				$tid=$this->my_db_lib->save_record($this->input->post(),'teams');
 				$this->_imageupload($this->input->post('id'));
 			$this->db_session->set_flashdata('msg', '<div class="success">Successfully team updated </div>');
+                        redirect('teams/add_teams');
 			}else{
 			$this->db_session->set_flashdata('msg', '<div class="error">'.validation_errors().'</div>');
 			}

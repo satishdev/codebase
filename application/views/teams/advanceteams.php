@@ -85,8 +85,10 @@
 						?>
 						<span class="cap"><span class="count">Request Sent</span></span>
 						<?php
-					}else if($row->is_approved==''){?>
-                  <span class="loss"> <span class="count"> <a class='act-status' rel='<?php echo $row->tid;?>' status='a'>Join</a></span></span>
+					}else if($row->is_approved==''){
+                                            ?>
+
+                                                <span class="loss"> <span class="count"> <a class='act-status jtmprf' id="join_team_in_profile" rel='<?php echo $row->tid;?>' status='a'>Join</a></span></span>
 				   <?php }?>
 			</div>
 	

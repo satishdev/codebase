@@ -352,7 +352,7 @@ createMatchView: function(opts){
                         classa: "field required",
                         name: "p1",
                         title: "Please select Your Team",
-                        prefill: {id: 0, label: "Select Team"},
+                        prefill: {id: '', label: "Select Team"},
                         options: config.data.p2
                     }));
         //match.push("<span id='team1'>"+config.data.p1.name+"</span>");
@@ -382,7 +382,7 @@ createMatchView: function(opts){
                         name: "p2",
                         title: "Please select sFriend",
                         onChange: "$.changeMatchPlayer2(this)",
-                        prefill: {id: 0, label: "Select Opponent"},
+                        prefill: {id: '', label: "Select Opponent"},
                         options: config.data.p2
                     }));        
         match.push("</li>");
@@ -602,7 +602,7 @@ resetSports: function(data){
                 name: "sport_name",
                 title: "Please select Sport Name",
                 onChange: "$.changeMatchSport(this)",
-                prefill: {id: 0, label: "Select Sports"},
+                prefill: {id: '', label: "Select Sports"},
                 options: data
             });
     if($('#sport_name').length){
@@ -619,7 +619,7 @@ resetClubs: function(data){
                 name: "club_name",
                 title: "Please select Club Name",
                 onChange: "$.changeMatchClub(this)",
-                prefill: {id: 0, label: "Select Club"},
+                prefill: {id: '', label: "Select Club"},
                 options: data
             });
     if($('#club_name').length){
@@ -635,7 +635,7 @@ resetCourts: function(data){
                 classa: "field required",
                 name: "court_name",
                 title: "Please select Court Name",
-                prefill: {id: 0, label: "Select Court"},
+                prefill: {id: '', label: "Select Court"},
                 options: data
             });
     if($('#court_name').length){

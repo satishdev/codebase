@@ -30,7 +30,7 @@
 
 
 
-                        <div class="txt_below">Forgot your password?</div>
+                        <div class="txt_below"><a href="<?php echo site_url('login/forgot'); ?>">Forgot your password?</a></div>
 
                     </div>
 

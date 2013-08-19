@@ -34,7 +34,7 @@
                     <?php if($row->is_owner!=0){ ?>
 							<a class='act-status' href='<?php echo site_url('sports/edit_sports/'.$row->sid);?>'>Edit</a>
 					<?php }else if($row->pid!=0){ ?>
-                    		<a class='act-status' rel='<?php echo $row->sid; ?>' status='r2'>Added</a>
+                                        <a class='act-status' rel='<?php echo $row->sid; ?>' status='r'>Remove</a>
 					<?php }else{ ?>
                     		<a class='act-status' rel='<?php echo $row->sid; ?>' status='a'>Add</a>
                     <?php } ?>

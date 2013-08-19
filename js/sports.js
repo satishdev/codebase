@@ -25,6 +25,7 @@ function toggleSportSelection(me){
 			me.removeClass('loading');
 			me.html(to_text[dataR]);
 			me.attr('status', to[dataR]);
+                        window.location.reload();
 		}
 	});
 }
