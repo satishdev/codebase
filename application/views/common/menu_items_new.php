@@ -110,9 +110,9 @@ if (isset($this->userType) && $this->userType == 2) {
 
                 <ul>
 
-                    <li><a class="item" href="<?php echo site_url('players/friends'); ?>">My Sports Partners</a></li>
+                    <li><a class="item" href="<?php echo site_url('players/friends'); ?>">My Sports Friends</a></li>
 
-                    <li><a class="item" href="<?php echo site_url('players/allplayers'); ?>">Add/Search Partners</a>
+                    <li><a class="item" href="<?php echo site_url('players/allplayers'); ?>">Add/Search sFriends</a>
 
                     </li>
 

@@ -59,7 +59,7 @@
 <?php } ?>
 </div>
 
-<div class="panel_header hdr2">Friends</div>
+<div class="panel_header hdr2">sFriends</div>
 <div class="profile_rows">
 <?php if($f_cnt>0) {?>
     <div class="profile_gallery">

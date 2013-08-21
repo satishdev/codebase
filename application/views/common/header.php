@@ -1,8 +1,14 @@
 <div class="header-bg">
 
     <div class="header ca">
-
-        <div class="logo fl"><a href="#"><img src="<?= base_url() ?>asserts/new_images/logo.png" alt="logo"
+<?php
+$redirect = 'home';
+if ($this->db_session->userdata('user_object') != '') {
+$redirect = 'players';
+}
+?>
+        
+		<div class="logo fl"><a href="<?php echo site_url("$redirect"); ?>"><img src="<?= base_url() ?>asserts/new_images/logo.png" alt="logo"
 
                                               class="logo_icn"/></a></div>
 
@@ -43,8 +49,8 @@
                         <input type="hidden" name="test" value="12345">
 
                         <div class="txt_below">
-						<a href="<?php echo base_url() . 'signup';?>">
-						<input type="submit" class="button_img" id="signup" value="Sign Up" name="signup"/></a>
+						<a href="<?php echo base_url().'signup';?>">
+						<input type="button" class="button_img" id="signup" value="Sign Up" name="signup"/></a>
 						</div>
 
                     </div>

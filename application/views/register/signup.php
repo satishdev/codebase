@@ -35,7 +35,7 @@
 
                 <label><span style="color:#FF0000">*</span><input type="text" class="form-box form-box-two" id="email" name="email"
 
-                              placeholder="Your Email"/></label>
+                              placeholder="Your Email Id"/></label>
 
                 <!--<label><input type="text" class="form-box form-box-two" placeholder="Re-enter Email" /></label>-->
 
