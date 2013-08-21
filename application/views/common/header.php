@@ -15,7 +15,7 @@ $redirect = 'players';
         <?php if (isset($header_login) && $header_login) { ?>
 
             <div class="email-pwd fr">
-
+				<?php echo $this->db_session->flashdata('login_err_msg') ?>
                 <form method="POST" action="<?php echo site_url('login'); ?>" name="login_frm" id="login_frm">
 
                     <div class="flds fl">

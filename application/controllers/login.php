@@ -58,8 +58,8 @@ class Login extends CI_Controller
                     redirect('clubs');
                 }
             } else {
-                $this->db_session->set_flashdata('msg', '<div class="error">Please check your details.</div>');
-                redirect('login');
+                $this->db_session->set_flashdata('login_err_msg', '<div class="error">The username or password you entered is incorrect.</div>');
+                redirect('home');
                 //$data['content_page'] =  'login_new';
                 // $this->load->view('common/base_template_plain', $data);
             }
