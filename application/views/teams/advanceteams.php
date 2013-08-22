@@ -96,7 +96,7 @@
 		<?php 
 		}} else{
 		?>
-             No Teams Found
+             <div class="team_list_row" align='center' style="color:#FF0000; font-size:14px; font-weight:bold">No Teams Found</div>
 			<?php } }?>
             <div class="clear"></div>
         </div>

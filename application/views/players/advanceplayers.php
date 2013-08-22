@@ -54,38 +54,54 @@
     </div>
     
     <div class="adv_search_results notifications">
-	<?php foreach($sports_data as $row){?>
-    	<div class="msg_item player">
-        <img class="u_icn" src="<?php echo base_url(); ?><?php if($row->image!='') echo 'images/th_'.$row->image;else echo $row->gender=='m'?"css/images/empty_image.png":"css/images/female_image.png";?>">
-        <div class="msg_data">
-            <div class="u_name"><?php echo $row->pname;?></div>
-            <div class="u_msg"><?php echo $row->cname;?></div>
-            <div class="msg_actions" rel='<?php echo $row->pid;?>'>
-                <div class='n_actions'>
-                	<?php
-						$txt = 'Add';
-						$status = 'a';
-						if($row->is_approved!=''){
-							if($row->is_approved=='0'){
-								$txt = 'Waiting for Approval';
-								$status = 'w';
-							}else if($row->is_approved=='1'){
-								$txt = 'Waiting for Approval';
-								$status = 'r';
-							}
-						}
-					?>
-                    <div class='act_wrap'><a class='n_act btn act-status' rel='<?php echo $row->pid;?>' status='<?php echo $status; ?>'><?php echo $txt; ?></a></div>
-                    <div class='clear'></div>
-                </div>
-            </div>
-            <div class='more'><a href="<?php echo site_url('profile/view/'.$row->pid);?>">More..</a></div>
-        </div>
-        </div>
-    
-           
-        <?php } ?>	
-            <div class="clear"></div>
+		
+	<?php 
+		if(isset($sports_data))
+		{
+			if(!empty($sports_data))
+			{
+				foreach($sports_data as $row)
+				{?>
+				<div class="msg_item player">
+				<img class="u_icn" src="<?php echo base_url(); ?><?php if($row->image!='') echo 'images/th_'.$row->image;else echo $row->gender=='m'?"css/images/empty_image.png":"css/images/female_image.png";?>">
+				<div class="msg_data">
+					<div class="u_name"><?php echo $row->pname;?></div>
+					<div class="u_msg"><?php echo $row->cname;?></div>
+					<div class="msg_actions" rel='<?php echo $row->pid;?>'>
+						<div class='n_actions'>
+							<?php
+								$txt = 'Add';
+								$status = 'a';
+								if($row->is_approved!=''){
+									if($row->is_approved=='0'){
+										$txt = 'Waiting for Approval';
+										$status = 'w';
+									}else if($row->is_approved=='1'){
+										$txt = 'Waiting for Approval';
+										$status = 'r';
+									}
+								}
+							?>
+							<div class='act_wrap'><a class='n_act btn act-status' rel='<?php echo $row->pid;?>' status='<?php echo $status; ?>'><?php echo $txt; ?></a></div>
+							<div class='clear'></div>
+						</div>
+					</div>
+					<div class='more'><a href="<?php echo site_url('profile/view/'.$row->pid);?>">More..</a></div>
+				</div>
+				</div>
+			   <?php
+				}
+			}
+			else
+			{
+				?>
+					<div class="msg_data" align='center' style="color:#FF0000; font-size:14px; font-weight:bold">No Record Found</div>
+				<?php
+			}
+		}
+		?>
+		
+        <div class="clear"></div>
         </div>
         <div class="clear"></div>
         <div id="pager_wrap">
