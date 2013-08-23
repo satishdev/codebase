@@ -1,0 +1,127 @@
+/*Styles*/
+body{ 
+	font-size: 13px ;
+	font-family:  Arial, sans-serif, "Helvetica Neue", Helvetica;
+}
+.header-bg{ height: auto;}
+.header .logo{ 
+	/*margin-top: 0;
+	position: relative;
+	top: 8px*/
+}
+.header .flds {margin-top: 6px;}
+.header .flds label{ font-size: 13px}
+.header .flds input#uname, .header .flds input#psw{ 
+	margin-top: 2px;
+	box-shadow: none;
+	background-color: #fff;
+	height: 24px;
+	line-height: 24px \9;
+}
+.header .flds input#uname.text:focus, .header .flds input#psw.text:focus{
+	box-shadow: 0 0 8px #FFF;
+}
+.header .login input {
+	 background: #6EB923;
+	 line-height: inherit;
+	 color: #f1f1f1;
+	 height: 28px
+}
+.header .txt_below{ margin-top: 2px}
+.header .email-pwd div.error{ position: absolute;top: 75px; margin-left: 0}
+.header .txt_below a input{ margin: 4px 0 0 4px; background-color: #ddd}
+.header .login input:hover {color: #fff;}
+.header .login input:active {color: #ddd;}
+.header .login {padding-top: 29px;}
+.header .txt_below label input{ position: relative; top: 1px}
+.header .txt_below label span{ margin-left: 2px; color: #A3A3A3}
+.header .txt_below label span:hover{ color: #f1f1f1}
+.header .txt_below label span:active{ color: #aaa}
+.header .txt_below a{ color: #D5D5D5}
+.header .txt_below a:hover{ color: #fff}
+.header .txt_below a:active{ color: #eee}
+
+input.button_img:hover { color: #130000}
+input.button_img:active { color: #a1a1a1}
+
+/*Sign Up Form*/
+
+.part2.fl{ float: none;}
+.signup-form{ margin: 0}
+.signup-form-heading{ 
+	border-bottom: 1px solid #B6B6B6;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	box-shadow: 0 1px 0 #FFF;
+}
+.signup-form-form.legend label{ float: right; color:#F45A51}
+.signup-form-form form label{ 
+	float: none;
+	text-align: right;
+	margin-top: 5px;
+}
+.signup-form-form { clear: both;}
+.signup-form-form .form-box{ 
+	margin-top: 0;
+	width: 240px;
+	height: 24px;
+	line-height: 22px;
+	padding: 2px 4px;
+	margin-bottom: 20px;
+	font-size: 12px;
+	background:url(../asserts/new_images/input_bg.png) repeat-x;
+}
+.signup-form-form .form-box, select.select_fld{
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+.signup-form-form .form-box:focus,.signup-form-form .form-box:hover:focus,
+.signup-form-form select.select_fld:focus, .signup-form-form select.select_fld:hover:focus{
+  -webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(82,168,236,.6);
+  -moz-box-shadow:inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(82,168,236,.6);
+  box-shadow:inset 0 1px 3px rgba(0,0,0,.05),0 0 8px rgba(82,168,236,.6);
+  border:1px solid #56b4ef;
+}
+.signup-form-form select.select_fld{ 
+	margin-bottom: 20px !important; 
+	height: 28px; 
+	line-height: 28px;
+	padding:4px;
+}
+.signup-form-form select.select_fld.long{ width: 250px; margin:0; }
+.signup-form-form .submit_btn{ 
+	width: 120px; 
+	margin:0; 
+	margin-left: 290px;
+	color: #f8f8f8;
+	border: 1px solid #3483C2;
+}
+.signup-form-form .submit_btn:hover{ color:#fff;border: 1px solid #1079C7; }
+.signup-form-form .submit_btn:active{ color:#ddd;border: 1px solid #aaa; }
+div.error{ color: #F45A51; vertical-align: middle; padding-top: 2px }
+
+.ui-datepicker{ font-size: 12px}
+.ui-datepicker select.ui-datepicker-year { margin-left: 2px}
+
+/*After login*/
+#search_menu .adv_search{ 
+	color: #3D4F75; 
+	margin-top: 2px; 
+	font-weight: bold;
+	text-shadow: 0 1px 0 #f1f1f1;
+}
+#search_menu .adv_search:hover{ color: #071F52}
+#search_menu .adv_search:active{ color: #999}
+.sub_menu_bar .item a.menu_link{ 
+	color: #757373; 
+	padding: 2px 0 2px 10px !important;
+	border-bottom: 1px solid #ddd;
+}
+.sub_menu_bar .item a.menu_link:hover{ color: #010101; background:#BCC4CD; color: #fefefe}
+a.menu_link{ color: #DADADA}
+a.menu_link:hover{ color: #fff}
+a.menu_link.active{ color: #000; font-weight: bold}
+#search_filter_type.active .u_type_wrap{ border-color: #999}
+
+#settings_drop_wrap .settings .settins_drop{ right: 0}
