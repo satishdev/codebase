@@ -21,7 +21,8 @@ $(document).ready(function() {
         <li>
             <label for="keywords">Image</label>
             <input type="file" id="image" name="image" class="upload" value=""/>
-        </li>		
+            <div class='frm-btns' style="color:red">Supported Image types are gif, jpg, png, jpeg, bmp</div>
+        </li>
         <li class='frm-btns'>
             <input type="submit" value="submit" name="submit" class="button_img"/>
         </li>
