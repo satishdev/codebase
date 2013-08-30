@@ -31,6 +31,7 @@
     </script>
 
     <link href="<?= base_url() ?>asserts/css/site_css/stylesheet2.css" rel="stylesheet" type="text/css"/>
+    <link href="<?= base_url() ?>styles/styles_update.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 

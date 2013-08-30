@@ -10,7 +10,7 @@
 <div class="part2 fl">
     <div class="signup-form">
         <div class="signup-form-heading">Sign Up</div>
-		<div class="signup-form-form" style="color:#FF0000"><label><strong>*</strong> Marked Fields are Mandatory</label></div>
+		<div class="signup-form-form legend"><label><strong>*</strong> Marked Fields are Mandatory</label></div>
         <div class="signup-form-form">
             <?
             echo validation_errors();
