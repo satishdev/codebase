@@ -41,6 +41,10 @@
             <label class="row_label">No of Players</label><span class="row_val"><?php echo $num_t_users;?>&nbsp;</span>
         </li>
     </ol>
+    <?php 
+    if(count($t_sprts))
+    {
+    ?>
 	<ol style="margin-left: 0px;">
         <li class="section_header ui-widget-header">
             <b>Sport History</b> &nbsp;
@@ -73,6 +77,9 @@
         </li>
         
        </ol>
+    <?php
+    }
+    ?>
 	</div>
 
 <?php }?>
