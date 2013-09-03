@@ -734,7 +734,7 @@ function golf_overview(course_id)
 
           <div class="tee_time_bottom">
 
-            <div class="tee_time_bottom_date"> <a href="#">[+] Soprts Courese</a> </div>
+            <div class="tee_time_bottom_date"> <a href="#">[+] Sport Courses</a> </div>
 
             
 

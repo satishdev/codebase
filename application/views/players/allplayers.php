@@ -21,10 +21,12 @@
                 	<?php
 						$txt = 'Add';
 						$status = 'a';
+                                                $showlink = true;
 						if($row->is_approved!=''){
 							if($row->is_approved=='0' && $row->from==$this->userId){
 								$txt = 'sFriend Request Sent';
 								$status = 'w';
+                                                                $showlink = false;
 							}else if($row->is_approved=='0' && $row->to==$this->userId){
 								$txt = 'Approve';
 								$status = 'w';
@@ -34,8 +36,19 @@
 								$status = 'w';
 							}
 						}
-					?>
+
+                    if($showlink)
+                    {?>
                     <div class='act_wrap center_wrap_all'><a class='n_act btn act-status ' rel='<?php echo $row->pid;?>' status='<?php echo $status; ?>'><?php echo $txt; ?></a></div>
+                    <?php
+                    }
+                    else
+                    {
+                    ?>
+                    <div class='act_wrap center_wrap_all'><a class='n_act btn act-status ' style="cursor:default" rel='<?php echo $row->pid;?>' status='<?php echo $status; ?>'><?php echo $txt; ?></a></div>
+                    <?php
+                    }
+                    ?>
                     <div class='clear'></div>
                 </div>
             </div>
