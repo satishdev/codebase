@@ -269,12 +269,14 @@ function edit_teams($id=0) {
 				//$_POST['created_by']=$this->userId;
 				$tid=$this->my_db_lib->save_record($this->input->post(),'teams');
 				$this->_imageupload($this->input->post('id'));
-			$this->db_session->set_flashdata('msg', '<div class="success">Successfully team updated </div>');
-                        redirect('teams/add_teams');
+				$this->db_session->set_flashdata('msg', '<div class="success">Successfully team updated </div>');
+                        //redirect('teams/add_teams');
+				redirect('teams/viewteam/'.$this->input->post('id'));		
 			}else{
 			$this->db_session->set_flashdata('msg', '<div class="error">'.validation_errors().'</div>');
-			}
 				redirect('teams/edit_teams/'.$this->input->post('id'));
+			}
+				
 		}else{
 			$data['team_data']=$this->teams_model->viewTeam($id,$this->userId);
 			$data['t_details']=$this->teams_model->viewTeamProfile($id,$this->userId);
