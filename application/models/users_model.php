@@ -739,5 +739,33 @@ function validate_player_email($post){
 			return 0;
 		}						
 	}
+	function pedu_details($peduid=0)
+    {
+        $sql = "select * from player_education where id='".$peduid."'";
+        //return $this->getDBResult($sql, 'object');
+		return $this->db->query($sql)->result();
+    }
+	
+	function pwe_details($pweid=0)
+    {
+        $sql = "select * from player_expierence where id='".$pweid."'";
+        //return $this->getDBResult($sql, 'object');
+		return $this->db->query($sql)->result();
+    }
+	function gettabledetails($tablenames=array())
+    {
+        $tbl_fields = new stdclass();
+        foreach($tablenames as $tablename)
+        {
+            $sql = "show columns from `".$tablename."`";
+            $fields = $this->db->query($sql)->result();
+            foreach($fields as $values)
+            {
+                $fld = $values->Field;
+                $tbl_fields->$fld = '';
+            }
+        }
+        return $tbl_fields;
+    }
 }
 ?>

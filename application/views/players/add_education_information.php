@@ -65,12 +65,13 @@
 </script>
 
 <div id='content_header'>
-    <div class='hdr-text'><?php  echo $u_details->first_name; ?> <?php  echo $u_details->last_name; ?> Add Educational Info</div>
+    <div class='hdr-text'><?php  echo $u_details->first_name; ?> <?php  echo $u_details->last_name.' '.$pedu_data->sub_heading.' '; ?>Educational Info</div>
 </div>
 
 <div id="content_wrapper" class="pad">
     <form id="appl_form" method="post" action="<?php echo site_url('players/add_education_information');?>" name="appl_form" >
-        <ul class='wesp-form'>
+ 		<input type='hidden' name='id' id='id' value='<?php echo $pedu_data->id;?>'/> 
+		<ul class='wesp-form'>
             <!--  <li>
                   <label for="educations_id">Education Type</label>
                               <select name='educations_id' id='educations_id' class="field">
@@ -79,39 +80,39 @@
               </li>-->
             <li>
                 <label for="course_name">School/Course Name</label>
-                <input id="course_name" name="course_name" class="text field" value=""/>
+                <input id="course_name" name="course_name" class="text field" value="<?php echo $pedu_data->course_name;?>"/>
             </li>
             <li>
                 <label for="degree">Degree</label>
-                <input id="degree" name="degree" class="text field" value=""/>
+                <input id="degree" name="degree" class="text field" value="<?php echo $pedu_data->degree;?>"/>
             </li>
             <li>
                 <label for="major">Study</label>
-                <input id="major" name="major" class="text field" value=""/>
+                <input id="major" name="major" class="text field" value="<?php echo $pedu_data->major;?>"/>
             </li>
             <li>
                 <label for="month">Attended From</label>
                 <select name='month' id='month' class="text field" style="width:80px; margin-right:20px;">
-                    <option value="">Select Month</option>
-                    <?php echo month_select(0); ?>
+                    <option value="">Month</option>
+                    <?php echo month_select($pedu_data->month); ?>
                 </select>&nbsp;&nbsp;&nbsp;&nbsp;<select name='year' id='year' class="field" style="width:80px;">
-                    <option value="">Select Year</option>
-                    <?php echo year_select(0); ?>
+                    <option value="">Year</option>
+                    <?php echo year_select($pedu_data->from_date); ?>
                 </select>
             </li>
             <li>
                 <label for="month2">Attended To</label>
                 <select name='month2' id='month2' class="text field" style="width:80px; margin-right:20px;">
-                    <option value="">Select Month</option>
-                    <?php echo month_select(0); ?>
+                    <option value="">Month</option>
+                    <?php echo month_select($pedu_data->month2); ?>
                 </select>&nbsp;&nbsp;&nbsp;&nbsp;<select name='year2' id='year2' class="field" style="width:80px;">
-                    <option value="">Select Year</option>
-                    <?php echo year_select(0); ?>
+                    <option value="">Year</option>
+                    <?php echo year_select($pedu_data->to_date); ?>
                 </select>
             </li>
             <li>
                 <label for="notes">Additional Notes</label>
-                <textarea id="notes" name="notes"></textarea>
+                <textarea id="notes" name="notes"><?php echo $pedu_data->notes;?></textarea>
 
             </li>
             <!--<li>
