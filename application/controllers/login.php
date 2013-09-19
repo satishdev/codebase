@@ -16,11 +16,11 @@ class Login extends CI_Controller
 
             $userType = $user_obj->getusertype();
             if ($userType == 1) {
-                redirect('cp');
+                //redirect('cp');				echo '<script>window.location.href="cp"</script>';
             } else if ($userType == 2) {
-                redirect('players');
+                //redirect('players');				echo '<script>window.location.href="players"</script>';
             } else if ($userType == 3) {
-                redirect('clubs');
+                //redirect('clubs');				echo '<script>window.location.href="clubs"</script>';
             }
         }
         $data = '';
@@ -51,11 +51,11 @@ class Login extends CI_Controller
                 //print_r($user_obj); exit;
                 $userType = $user_obj->getusertype();
                 if ($userType == 1) {
-                    redirect('cp');
+                    //redirect('cp');					echo '<script>window.location.href="cp"</script>';
                 } else if ($userType == 2) {
-                    redirect('players');
+                    //redirect('players');					echo '<script>window.location.href="players"</script>';
                 } else if ($userType == 3) {
-                    redirect('clubs');
+                    //redirect('clubs');					echo '<script>window.location.href="clubs"</script>';
                 }
             } else {
                 $this->db_session->set_flashdata('login_err_msg', '<div class="error">The username or password you entered is incorrect.</div>');
@@ -115,7 +115,7 @@ class Login extends CI_Controller
     {
         $this->db_session->sess_destroy();
         delete_cookie("remember_me_token");
-        redirect('home');
+        //redirect('home');		echo '<script>window.location.href="../home"</script>';
     }
 }
 
