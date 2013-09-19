@@ -23,8 +23,10 @@
     var active_tab = <?php echo $active_tab; ?>;
 
     $(function () {
-
-        $('#main_menu > li:eq(' + active_tab + ')').addClass('active');
+        /*$('.item').click(function(){
+            $(this).closest('li').addClass('active');
+        });*/
+        $('.menu_left .jitem:eq(' + active_tab + ')').addClass('active');
 
     });
 
@@ -88,9 +90,9 @@ if (isset($this->userType) && $this->userType == 2) {
 
         <ul>
 
-            <li><a class="item" href="<?php echo site_url('players'); ?>">Home</a></li>
+            <li><a class="item jitem" href="<?php echo site_url('players'); ?>">Home</a></li>
 
-            <li><a class="item" href="<?php echo site_url('players/profile'); ?>">Profile</a>
+            <li><a class="item jitem" href="<?php echo site_url('players/profile'); ?>">Profile</a>
 
                 <ul>
 
@@ -106,7 +108,7 @@ if (isset($this->userType) && $this->userType == 2) {
 
             </li>
 
-            <li><a class="item" href="<?php echo site_url('players/friends'); ?>">Contacts</a>
+            <li><a class="item jitem" href="<?php echo site_url('players/friends'); ?>">Contacts</a>
 
                 <ul>
 
@@ -122,7 +124,7 @@ if (isset($this->userType) && $this->userType == 2) {
 
             </li>
 
-            <li><a class="item" href="<?php echo site_url('sports/add_sports'); ?>">Sports</a>
+            <li><a class="item jitem" href="<?php echo site_url('sports/add_sports'); ?>">Sports</a>
 
                 <ul>
 
@@ -136,7 +138,7 @@ if (isset($this->userType) && $this->userType == 2) {
 
             </li>
 
-            <li><a class="item" href="<?php echo site_url('teams/add_teams'); ?>">Teams</a>
+            <li><a class="item jitem" href="<?php echo site_url('teams/add_teams'); ?>">Teams</a>
 
                 <ul>
 
@@ -152,7 +154,7 @@ if (isset($this->userType) && $this->userType == 2) {
 
             </li>
 
-            <li><a class="item" href="<?php echo site_url('inbox/'); ?>">Messages </a>
+            <li><a class="item jitem" href="<?php echo site_url('inbox/'); ?>">Messages </a>
 
                 <ul>
 
@@ -168,7 +170,7 @@ if (isset($this->userType) && $this->userType == 2) {
 
             </li>
 
-            <li><a class="item" href="<?php echo site_url('cb/allclubs'); ?>">Golf Courses</a>
+            <li><a class="item jitem" href="<?php echo site_url('cb/allclubs'); ?>">Golf Courses</a>
 
                 <ul>
 
@@ -180,7 +182,7 @@ if (isset($this->userType) && $this->userType == 2) {
 
             </li>
 
-            <li><a class="item" href="#">Tee Times</a>
+            <li><a class="item jitem" href="#">Tee Times</a>
 
                 <ul>
 
@@ -244,9 +246,9 @@ if (isset($this->userType) && $this->userType == 3) {
 
         <ul>
 
-            <li><a class="item" href="<?php echo site_url('clubs'); ?>">Home</a></li>
+            <li><a class="item jitem" href="<?php echo site_url('clubs'); ?>">Home</a></li>
 
-            <li><a class="item" href="<?php echo site_url('sports/add_sports'); ?>">Sports</a>
+            <li><a class="item jitem" href="<?php echo site_url('sports/add_sports'); ?>">Sports</a>
 
                 <ul>
 
@@ -260,7 +262,7 @@ if (isset($this->userType) && $this->userType == 3) {
 
             </li>
 
-            <li><a class="item" href="<?php echo site_url('teams/add_teams'); ?>">Teams</a>
+            <li><a class="item jitem" href="<?php echo site_url('teams/add_teams'); ?>">Teams</a>
 
                 <ul>
 
@@ -274,7 +276,7 @@ if (isset($this->userType) && $this->userType == 3) {
 
             </li>
 
-            <li><a class="item" href="<?php echo site_url('inbox/'); ?>">Messages</a>
+            <li><a class="item jitem" href="<?php echo site_url('inbox/'); ?>">Messages</a>
 
                 <ul>
 
@@ -288,7 +290,7 @@ if (isset($this->userType) && $this->userType == 3) {
 
             </li>
 
-            <li><a class="item" href="<?php echo site_url('clubs/add_facilities'); ?>">Facilities</a>
+            <li><a class="item jitem" href="<?php echo site_url('clubs/add_facilities'); ?>">Facilities</a>
 
                 <ul>
 
@@ -300,7 +302,7 @@ if (isset($this->userType) && $this->userType == 3) {
 
             </li>
 
-            <li><a class="item" href="<?php echo site_url('clubs/add_holidays'); ?>">Holidays</a>
+            <li><a class="item jitem" href="<?php echo site_url('clubs/add_holidays'); ?>">Holidays</a>
 
                 <ul>
 
@@ -312,7 +314,7 @@ if (isset($this->userType) && $this->userType == 3) {
 
             </li>
 
-            <li><a class="item" href="<?php echo site_url('clubs/add_news'); ?>">News</a>
+            <li><a class="item jitem" href="<?php echo site_url('clubs/add_news'); ?>">News</a>
 
                 <ul>
 
@@ -324,7 +326,7 @@ if (isset($this->userType) && $this->userType == 3) {
 
             </li>
 
-            <li><a class="item" href="<?php echo site_url('clubs/add_courts'); ?>">Tee Times</a>
+            <li><a class="item jitem" href="<?php echo site_url('clubs/add_courts'); ?>">Tee Times</a>
 
                 <ul>
 
@@ -336,7 +338,7 @@ if (isset($this->userType) && $this->userType == 3) {
 
             </li>
 
-            <li><a class="item" href="<?php echo site_url('clubs/club_users'); ?>">Golf Courses</a>
+            <li><a class="item jitem" href="<?php echo site_url('clubs/club_users'); ?>">Golf Courses</a>
 
                 <ul>
 
