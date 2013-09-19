@@ -24,6 +24,7 @@ class Teams extends MY_Controller {
 		$config['full_tag_close'] = '</div>';
 		if(isset($_REQUEST['serchKey']) and trim($_REQUEST['serchKey'])!='Search...'){
 			$serchKey=trim($_REQUEST['serchKey']);
+                        $this->db_session->set_userdata('pserchKey',$serchKey);
 		}else{
 			$serchKey='';
 		}

@@ -553,7 +553,6 @@ if ($this->db_session->userdata('user_object') != '') {
 
 
                 <!--<form name="srch" id="srch" action="<?php  //echo $form_url;?>" method="post">-->
-
                 <form name="srch" id="srch" action="<?= $form_url ?>" method="post">
 
 
@@ -647,7 +646,14 @@ if ($this->db_session->userdata('user_object') != '') {
 <div class="clr"></div>
 
 <div class="clr"></div>
-
+<?php
+if($this->db_session->userdata('pserchKey'))
+{
+?>
+<div style="color:red;padding-left: 40%;position: relative;top: 9px;">Search Results for <?php echo $this->db_session->userdata('pserchKey');?></div>
+<?php
+}
+?>
 </div>
 
 </div>
@@ -769,7 +775,7 @@ if ($this->db_session->userdata('user_object') != '') {
     }
 
 </script>
-
+<?php $this->db_session->set_userdata('pserchKey','')?>
 <!--  </div>
 
 </div>-->

@@ -975,7 +975,7 @@ $countryArr=$countryArr->result();
 
                     </div>
 
-                    <a href="#"><img src="<?=base_url()?>asserts/images/lander3.png" alt="#" /></a> </div>
+                    <a href="#"><img src="<?=base_url()?>asserts/images/lander3.png" title="Enter your Promotion Code"  alt="#" /></a> </div>
 
                 </li>
 

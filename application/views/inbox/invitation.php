@@ -8,7 +8,7 @@
     <?php
 	$obj = array();
 	$obj['options'][] = array('id'=>'inbox_messages', 'label'=>'Messages', 'href'=>site_url('inbox'));
-	$obj['options'][] = array('id'=>'inbox_invitations', 'label'=>'Invitations', 'href'=>site_url('inbox/invitation'), 'active'=>true);
+	$obj['options'][] = array('id'=>'inbox_invitations', 'label'=>'Invitations ('.count($frends_data).')', 'href'=>site_url('inbox/invitation'), 'active'=>true);
 	$obj['options'][] = array('id'=>'inbox_notifications', 'label'=>'Notifications', 'href'=>site_url('inbox/notifications'));
     echo horizontalTab($obj);
 	?>
@@ -27,7 +27,7 @@
 				$btnText = "Accept";
 				$ntype = 1;
             	if($row->is_type == 2){
-					$msg = "Hi, you are requested to join this team.";
+					$msg = "You are requested to join ".$row->pname.".";
 					$btnText = "Join Team";
 					$ntype = 2;
 				}else if($row->is_type == 3){

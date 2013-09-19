@@ -9,7 +9,7 @@
 	$obj = array();
 	$obj['options'][] = array('id'=>'inbox_messages', 'label'=>'Messages', 'href'=>site_url('inbox'));
 	$obj['options'][] = array('id'=>'inbox_invitations', 'label'=>'Invitations', 'href'=>site_url('inbox/invitation'));
-	$obj['options'][] = array('id'=>'inbox_notifications', 'label'=>'Notifications', 'href'=>site_url('inbox/notifications'), 'active'=>true);
+	$obj['options'][] = array('id'=>'inbox_notifications', 'label'=>'Notifications ('.count($notify_data).')', 'href'=>site_url('inbox/notifications'), 'active'=>true);
     echo horizontalTab($obj);
 	?>
 </div>

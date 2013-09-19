@@ -397,14 +397,16 @@ createMatchView: function(opts){
     
     match.push("<li>");
     match.push("<label for='club_name'>Club Name:</label>");
-    match.push($.resetClubs([]));
+    //match.push($.resetClubs([]));
+    match.push("<input type='text' id='club_name' class='text field required' name='club_name' title='Please enter Club name' />");
     match.push("<img id='club_name_spin' class='loading_spin m_data_spin' />");
     match.push("</li>");    
     match.push("<li id='other_club' style='display:none'></li>");
 
     match.push("<li>");
     match.push("<label for='court_name'>Court Name:</label>");
-    match.push($.resetCourts([]));
+    //match.push($.resetCourts([]));
+    match.push("<input type='text' id='court_name' class='text field required' name='court_name' title='Please enter Court name' />");
     match.push("<img id='court_name_spin' class='loading_spin m_data_spin' />");
     match.push("</li>");
 
@@ -482,12 +484,12 @@ changeMatchPlayer2: function(me){
         });
     }
 
-    $.resetClubs([]);
-    $.resetCourts([]);
+    //$.resetClubs([]);
+    //$.resetCourts([]);
 },
 
 changeMatchSport: function(me){
-    var me = $(me);
+    /*var me = $(me);
     var value = me.val();
 
     if(value == 0){
@@ -509,13 +511,13 @@ changeMatchSport: function(me){
                 $.resetClubs(data);
             }
         });
-    }
+    }*/
 
-    $.resetCourts([]);
+    //$.resetCourts([]);
 },
 
 changeMatchClub: function(me){
-    var me = $(me);
+    /*var me = $(me);
     var value = me.val();
     if(value == 'other'){
         var c = [];
@@ -523,11 +525,11 @@ changeMatchClub: function(me){
         $('#other_club').html(c.join("")).slideDown();
     }else if(value == 0){
         $.resetCourts([]);
-    }else if(value && value > 0){
+    }else if(value && value > 0){*/
         /*$('#other_club').slideUp(function(){
             $(this).html("");
         });*/
-        var param = [];
+        /*var param = [];
         param.push("cid="+value);
         param.push("match_type="+$('#match_type').val());
         $.ajax({
@@ -543,7 +545,7 @@ changeMatchClub: function(me){
                 $.resetCourts(data);
             }
         });
-    }
+    }*/
 },
 
 changeMatchTeam2: function(me){
@@ -559,7 +561,7 @@ changeMatchTeam2: function(me){
         /*$('#other_team2').slideUp(function(){
             $(this).html("");
         });*/
-        var param = [];
+        /*var param = [];
         param.push("team_id="+value);
         param.push("match_type="+$('#match_type').val());
         $.ajax({
@@ -574,7 +576,7 @@ changeMatchTeam2: function(me){
                 $('#club_name_spin').fadeOut();
                 $.resetClubs(data);
             }
-        });
+        });*/
     }
 },
 

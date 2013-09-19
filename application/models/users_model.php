@@ -155,7 +155,7 @@ function validate_player_email($post){
 				FROM player_schedule ps
 				INNER JOIN schedule_users su ON ps.id=su.schedule_id
 				INNER JOIN players p ON su.user_id=p.id and su.user_type='1'
-				WHERE su.user_id='".$user_id."' AND ps.start_date between '"
+				WHERE is_approved='1' and su.user_id='".$user_id."' AND ps.start_date between '"
       .php2MySqlTime($ed)."' and '". php2MySqlTime($sd)."' group by ps.id";
         $res=$this->db->query($sql);
         return $res->result();
@@ -362,32 +362,32 @@ function validate_player_email($post){
 	function requestfriends($uid,$pagenumber=0,$limit){
   			
 	
-				$sql="select  p.id as pid,p.gender,CONCAT(p.first_name,' ',p.last_name) as pname,
+				$sql="(select  p.id as pid,p.gender,CONCAT(p.first_name,' ',p.last_name) as pname,
 						IFNULL(pf.is_approved,'') as is_approved,IFNULL(p.image,'') as image,pf.`from` as from_id,
-						pf.`to` as to_id,'1' as is_type
+						pf.`to` as to_id,'1' as is_type, p.date_added
 						from players p
 						inner join player_friends pf on p.id=pf.`from`
 						where p.status='1' and
 						p.player_types_id='2' 
-						and p.id!='".$uid."' and `to`='".$uid."' and pf.is_approved='0'  
+						and p.id!='".$uid."' and `to`='".$uid."' and pf.is_approved='0'  order by p.date_added)
 						UNION
-						select  pt.teams_id as pid,p.gender,t.name as pname,
+						(select  pt.teams_id as pid,p.gender,t.name as pname,
 						IFNULL(pt.is_approved,'') as is_approved,IFNULL(t.logo,'') as image,
-						pt.teams_id as from_id,pt.players_id as to_d,'2' as is_type
+						pt.teams_id as from_id,pt.players_id as to_d,'2' as is_type, p.date_added
 						from player_teams pt 
 						inner join teams t on pt.teams_id =t.id
 						inner join sports s on t.sports_id=s.id 
 						inner join players p on pt.players_id=p.id
-						where t.status='1' and pt.request_from='0' and pt.is_approved='0' and  pt.players_id='".$uid."'";
+						where t.status='1' and pt.request_from='0' and pt.is_approved='0' and  pt.players_id='".$uid."' order by p.date_added)";
 						if($this->userType==3){
-						$sql.=" UNION SELECT cp.id AS pid,p.gender, CONCAT(p.first_name,' ',p.last_name) AS pname,
+						$sql.=" UNION (SELECT cp.id AS pid,p.gender, CONCAT(p.first_name,' ',p.last_name) AS pname,
 						 IFNULL(cp.is_approved,'') AS is_approved, IFNULL(p.image,'') AS image,'2' AS from_id,
-								'3' AS to_id,'3' AS is_type
+								'3' AS to_id,'3' AS is_type, p.date_added
 							FROM club_players cp
 							INNER JOIN players p ON cp.players_id=p.id
 							INNER JOIN clubs clb ON cp.clubs_id=clb.id
-							WHERE clb.id='".$this->clubId."' and is_approved='0'";	
-							}	
+							WHERE clb.id='".$this->clubId."' and is_approved='0' order by p.date_added ) as allrecords)";
+							}
         //$res = $this->db->query($sql);
         return $this->pageQuery($sql,$pagenumber,$limit);
 		

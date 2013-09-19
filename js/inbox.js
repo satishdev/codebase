@@ -159,6 +159,9 @@ function inbox_grid(){
             postData:{
                 //user_type:$('[name=users_type]').val(),
                // status:$('[name=status]').val()
+            },
+            loadComplete:function(data){
+                $('#inbox_messages').find('.label_span').html($('#inbox_messages').find('.label_span').html()+' ('+data.records+')');
             }
     });
 }

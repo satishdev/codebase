@@ -47,6 +47,7 @@
     width: 138px!important;}
 	
 </style>
+<link href="<?=base_url()?>asserts/css/cart_css/golfhub.css" rel="stylesheet" type="text/css">
 
 <?
 	if(!empty($result))
@@ -93,6 +94,12 @@
 				</ul>
 			 <div class="clr"></div>
 			</div>
+                      <div id="toprow" class="clear">
+    <h1>Your Shopping Cart</h1>
+    <div id="breadcrumb-container">
+    </div>
+                 <div class="clear"></div>
+            </div>
 		  
 		  
 		  
