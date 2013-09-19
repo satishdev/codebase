@@ -23,7 +23,7 @@
     	<div class="u_name"><?php echo $row->pname;?></div>
         <div class="u_msg">
         	<?php
-				$msg = "Hi, add me as your friend..";
+				$msg = "Add me as your Sports Friend";
 				$btnText = "Accept";
 				$ntype = 1;
             	if($row->is_type == 2){

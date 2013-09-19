@@ -32,7 +32,7 @@ function month_select($selected_month=0,$no_future=false){
 
     for($i=1;$i<=12;$i++){
         $html.="<option value='$i'";
-        if($selected_year==$i){ $html.=" selected='selected' "; }
+        if($selected_month==$i){ $html.=" selected='selected' "; }
         $html.=">$i</option>";
     }
     return $html;

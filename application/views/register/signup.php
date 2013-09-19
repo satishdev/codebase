@@ -91,7 +91,7 @@
 				
 				<div class="d_fds">
 					<div class="left_fld">
-						<label for="gender"><span class="validcol">*</span> Gender:</label> 
+						<label for="gender">Gender:</label> 
 					</div>
 					<div class="right_fld">
 						<select class="select_fld long required valid" id="gender" name="gender">

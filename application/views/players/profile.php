@@ -130,6 +130,7 @@
 				<th>Field of Study </th>
 				<th>From</th>
                 <th>To</th>
+				<th></th>
 				<!--<th>Country</th>
 				<th>State</th>
 				<th>Zip Code</th>-->
@@ -140,8 +141,9 @@
                 <td><?php echo $erow->course_name;?></td>
 				<td><?php echo $erow->degree;?></td>
                 <td><?php echo $erow->major;?></td>
-				<td><?php echo date('M Y',strtotime($erow->from_date));?></td>
-                <td><?php echo date('M Y',strtotime($erow->to_date));?></td>
+				<td><?php echo date("M", mktime(0, 0, 0, $erow->month, 10)).' '. date('Y',strtotime($erow->from_date));?></td>
+                <td><?php echo date("M", mktime(0, 0, 0, $erow->month2, 10)).' '. date('Y',strtotime($erow->to_date));?></td>
+				<td><a href="<?php echo base_url();?>players/add_education_information/<?php echo $erow->id;?>">Edit</a></td>
 				
            	</tr>
 			<?php }?>
@@ -188,6 +190,7 @@
 				<th>Location</th>
                 <th>From</th>
 				<th>To</th>
+				<th></th>
 				<!--<th>Country</th>
                 <th>State</th>
 				<th>Zip Code</th>-->
@@ -199,8 +202,9 @@
             	<td><?php echo $wrow->company;?></td>
                 <td><?php echo $wrow->designation;?></td>
 				<td><?php echo $wrow->location;?></td>
-				<td><?php echo date('M Y',strtotime($wrow->from_date));?></td>
-                <td><?php echo date('M Y',strtotime($wrow->to_date));?></td>
+				<td><?php echo date("M", mktime(0, 0, 0, $wrow->month, 10)).' '. date('Y',strtotime($wrow->from_date));?></td>
+                <td><?php echo date("M", mktime(0, 0, 0, $wrow->month2, 10)).' '. date('Y',strtotime($wrow->to_date));?></td>
+				<td><a href="<?php echo base_url();?>players/add_working_expierence/<?php echo $wrow->id;?>">Edit</a></td>
 				<!--<td><?php //echo $wrow->cname;?></td>
                 <td><?php //echo $wrow->state;?></td>
 				 <td><?php //echo $wrow->zip;?></td>-->

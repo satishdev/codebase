@@ -10,7 +10,7 @@ class Login extends CI_Controller
     }
 
     public function index()
-    {
+    {	
         if ($this->db_session->userdata('user_object') != '') {
             $user_obj = @unserialize($this->db_session->userdata('user_object'));
 
@@ -41,7 +41,7 @@ class Login extends CI_Controller
             exit;*/
             $data_VloginObject = $this->login_model->SetIvieLoginParameters($login);
             $LoginObject = $this->login_model->login_auth($data_VloginObject);
-            if ($LoginObject) {
+            if ($LoginObject) {		
                 $LoginSessionObject = $this->login_model->setLoginSession($LoginObject);
                 $this->db_session->set_userdata('user_object', serialize($LoginSessionObject));
                 //$this->db_session->set_userdata(array('user_object' => serialize($LoginSessionObject), 'remember' => $login->remember_me));
@@ -63,7 +63,7 @@ class Login extends CI_Controller
                 //$data['content_page'] =  'login_new';
                 // $this->load->view('common/base_template_plain', $data);
             }
-        } else {
+        } else {		
             $data['my_select'] = 'signin';
             $data['active_tab'] = '0';
             $data['links_js_css'] = 'register/links_js_css';

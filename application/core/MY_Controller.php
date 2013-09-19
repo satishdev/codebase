@@ -10,7 +10,7 @@ class MY_Controller extends CI_Controller
         parent::__construct();
 		
 		 /*if($this->db_session->userdata('user_object')==''){
-            redirect('login');
+            redirect('home');
         }*/
 		 if($this->db_session->userdata('user_object')!=''){
 						 $user_obj= @unserialize($this->db_session->userdata('user_object'));
@@ -43,7 +43,7 @@ class MY_Playercontroller extends CI_Controller
         parent::__construct();
 		
 		 if($this->db_session->userdata('user_object')==''){
-            redirect('login');
+            redirect('home');
         }
 		 if($this->db_session->userdata('user_object')!=''){
 						 $user_obj= @unserialize($this->db_session->userdata('user_object'));
@@ -64,7 +64,7 @@ class MY_Clubcontroller extends CI_Controller
         parent::__construct();
 		
 		 if($this->db_session->userdata('user_object')==''){
-            redirect('login');
+            redirect('home');
         }
 		 if($this->db_session->userdata('user_object')!=''){
 						 $user_obj= @unserialize($this->db_session->userdata('user_object'));

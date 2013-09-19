@@ -145,9 +145,9 @@ public function jointm() {
 		  //print_r($_POST);exit;
 			if ($this->form_validation->run())
 			{
-		 	$_POST['user_id']=$this->userId;
-			//$num=$this->teams_model->checkTmName($this->input->post('name'));
-			//if($num==0){
+				$_POST['user_id']=$this->userId;
+				//$num=$this->teams_model->checkTmName($this->input->post('name'));
+				//if($num==0){
 				$_POST['created_by']=$this->userId;
 				if($_POST['level_id']=='custom'){
 					if(isset($_POST['recommend']))
@@ -174,7 +174,7 @@ public function jointm() {
 					}
 				$this->_imageupload($tid);
 				$this->db_session->set_flashdata('msg', '<div class="success">Successfully team created </div>');
-				redirect('teams/viewteam/'.$tid);
+				redirect('teams/viewteam/'.$tid.'/1');
 				/*}else{
 					$this->db_session->set_flashdata('msg', '<div class="error">"'.validation_errors().'"</div>');
 					redirect('teams/add_teams');
@@ -270,12 +270,14 @@ function edit_teams($id=0) {
 				//$_POST['created_by']=$this->userId;
 				$tid=$this->my_db_lib->save_record($this->input->post(),'teams');
 				$this->_imageupload($this->input->post('id'));
-			$this->db_session->set_flashdata('msg', '<div class="success">Successfully team updated </div>');
-                        redirect('teams/add_teams');
+				$this->db_session->set_flashdata('msg', '<div class="success">Successfully team updated </div>');
+                        //redirect('teams/add_teams');
+				redirect('teams/viewteam/'.$this->input->post('id'));		
 			}else{
 			$this->db_session->set_flashdata('msg', '<div class="error">'.validation_errors().'</div>');
-			}
 				redirect('teams/edit_teams/'.$this->input->post('id'));
+			}
+				
 		}else{
 			$data['team_data']=$this->teams_model->viewTeam($id,$this->userId);
 			$data['t_details']=$this->teams_model->viewTeamProfile($id,$this->userId);
@@ -321,7 +323,7 @@ function edit_teams($id=0) {
 				
 		 }
 		  
-		function viewteam($id=0){
+		function viewteam($id=0,$from_page=0){
 		
 			$data['t_details']=$this->teams_model->viewTeamProfile($id,$this->userId);
 			$sdata=$this->teams_model->listofAllteamusers($id);
@@ -337,6 +339,7 @@ function edit_teams($id=0) {
 			$data['active_tab'] = '4';
 			else
 			$data['active_tab'] = '2';
+			$data['from_page']=$from_page;
 			$data['left_nav'] = 'teams/profile_image';
 			$data['right_nav'] = 'teams/team_relations';
 			$data['long_right'] = true;

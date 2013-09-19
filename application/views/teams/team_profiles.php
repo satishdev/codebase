@@ -9,7 +9,8 @@
         if($t_details->is_approved == '0'){
             echo "<span class='tr_status'>Pending Request</span>";
         }else if($t_details->is_approved == '1'){
-            echo "<span class='tr_status'>Already Joined</span>";
+            if($from_page==0)
+			echo "<span class='tr_status'>Already Joined</span>";
         }else{
             echo "<img id='team_request_spin' class='team_request_spin' src='".base_url()."css/images/loading_spin.gif' />".smallButton(array('label'=>'Join team', 'id'=>'join_team_in_profile', 'rel'=>$t_details->id));
         }

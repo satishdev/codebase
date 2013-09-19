@@ -34,43 +34,44 @@ $(document).ready(function() {
 </script>
 
 <div id='content_header'>
-	<div class='hdr-text'><?php  echo $u_details->first_name; ?> <?php  echo $u_details->last_name; ?> Add Work Experience</div>
+	<div class='hdr-text'><?php  echo $u_details->first_name; ?> <?php  echo $u_details->last_name.' '.$pwe_data->sub_heading.' '; ?> Work Experience</div>
 </div>
 
 <div id="content_wrapper" class="pad">
 <form id="appl_form" method="post" action="<?php echo site_url('players/add_working_expierence');?>" name="appl_form" >
+<input type='hidden' name='id' id='id' value='<?php echo $pwe_data->id;?>'/>
     <ul class='wesp-form'>	    
         <li>
             <label for="company">Company Name</label>
-            <input id="company" name="company" class="text field" value=""/>
+            <input id="company" name="company" class="text field" value="<?php echo $pwe_data->company;?>"/>
         </li>
 		<li>
             <label for="exp_skill">Designation</label>
-            <input id="designation" name="designation" class="text field" value=""/>
+            <input id="designation" name="designation" class="text field" value="<?php echo $pwe_data->designation;?>"/>
         </li>
 		<li>
             <label for="exp_skill">Location </label>
-            <input id="location" name="location" class="text field" value=""/>
+            <input id="location" name="location" class="text field" value="<?php echo $pwe_data->location;?>"/>
         </li>
 		<li>
             <label for="exp_skill">Time Period From </label>
 			 <select name='month' id='month' class="text field" style="width:80px; margin-right:20px;">
-	 		 <?php echo month_select(0); ?>
-	  		</select>&nbsp;&nbsp;&nbsp;&nbsp;<select name='year' id='year' class="field" style="width:80px;">
-	 		 <?php echo year_select(0); ?>
+	 		 <?php echo month_select($pwe_data->month); ?>
+	  		</select>&nbsp;&nbsp;&nbsp;&nbsp;<select name='from_date' id='from_date' class="field" style="width:80px;">
+	 		 <?php echo year_select($pwe_data->from_date); ?>
 	  		</select>
         </li>
 		<li>
             <label for="exp_skill">Time Period To</label>
 			 <select name='month2' id='month2' class="text field" style="width:80px; margin-right:20px;">
-	 		 <?php echo month_select(0); ?>
-	  		</select>&nbsp;&nbsp;&nbsp;&nbsp;<select name='year2' id='year2' class="field" style="width:80px;">
-	 		 <?php echo year_select(0); ?>
+	 		 <?php echo month_select($pwe_data->month2); ?>
+	  		</select>&nbsp;&nbsp;&nbsp;&nbsp;<select name='to_date' id='to_date' class="field" style="width:80px;">
+	 		 <?php echo year_select($pwe_data->to_date); ?>
 	  		</select>
         </li>
 		<li>
             <label for="exp_skill">Additional Notes</label>
-			<textarea id="additional_notes" name="additional_notes"></textarea>
+			<textarea id="additional_notes" name="additional_notes"><?php echo $pwe_data->additional_notes;?></textarea>
         </li>
 		<!--<li>
             <label for="exp_skill">Expierence Skill</label>
