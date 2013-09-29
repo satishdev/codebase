@@ -10,7 +10,7 @@ class Schedule_model extends CI_Model {
 	function add_schedule($data=array()){
 	
 		$player_schedule=array(
-			'name' =>isset($data['name'])?$data['name']:'',
+			'calender_type' =>isset($data['calender_type'])?$data['calender_type']:'',
 			'players_id' =>$data['players_id'],
 			'description' =>isset($data['description'])?$data['description']:'',
 			'start_date' =>date('Y-m-d H:i:s',strtotime($data['start_date'])),
@@ -18,8 +18,20 @@ class Schedule_model extends CI_Model {
 			'schedule_type'  =>$data['schedule_type'],
 			'created_by' =>$data['created_by'],
 			'isalldayevent' =>isset($data['isalldayevent'])?$data['isalldayevent']:1,
-			'color' =>isset($data['color'])?$data['color']:''
+			'color' =>isset($data['color'])?$data['color']:'',
+			'location' =>isset($data['location'])?$data['location']:'',
+			'who_for' =>isset($data['who_for'])?$data['who_for']:''
 		);
+		//if($data['calender_type'] != 4)
+		//{
+			$player_schedule['name']=isset($data['name'])?$data['name']:'';
+		//}
+		//if($data['calender_type'] == 4)
+		//{
+			$player_schedule['team']=isset($data['team'])?$data['team']:'';
+			$player_schedule['favorite_team']=isset($data['favorite_team'])?$data['favorite_team']:'';
+		//}
+		
 		/*if($data['schedule_type']=='2'){
 			$user_type='2';
 		}else{

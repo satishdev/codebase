@@ -192,7 +192,10 @@
             //Add a new event
             $("#faddbtn").click(function(e) {
                 var url =base_url+"cal/details";
-                OpenModelWindow(url,{ width: 500, height: 400, caption: "Create New Calendar"});
+                //OpenModelWindow(url,{ width: 500, height: 400, caption: "Create New Calendar"});
+				OpenModelWindow(url,{ width: 600, height: 400, caption:"Manage  The Calendar",onclose:function(){
+                       $("#gridcontainer").reload();
+                    }});
             });
             //go to today
             $("#showtodaybtn").click(function(e) {
