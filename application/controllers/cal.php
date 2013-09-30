@@ -107,7 +107,15 @@ if($sql->num_rows()>0){
 }else{
 $data['eventss']='';
 }
- $this->load->view('cal/edit', $data);
+$data['id']=$id;
+
+$teams_sql=$this->db->query("select id,name from teams where status='1' order by name");
+if($teams_sql->num_rows()>0){
+	$data['teams']=$teams_sql->result_array();
+}else{
+$data['teams']='';
+}
+$this->load->view('cal/edit', $data);
 }
 
 function export_view($id=0){

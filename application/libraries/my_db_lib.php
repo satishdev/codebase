@@ -14,7 +14,7 @@ class My_db_lib {
         'player_interests'=>array('id', 'players_id', 'intersts_id', 'skills', 'created_date', 'modified_date', 'ip_address'),
         'inbox'=>array('id', 'from', 'to', 'message', 'subject', 'status', 'create_date'),
         'inbox_users'=>array('id','inbox_id', 'user_id', 'status', 'created_date'),
-        'player_schedule'=>array( 'id',  'name',  'location',  'players_id', 'description',  'start_date',  'end_date',  'is_approved',  'schedule_type',  'color',  'isalldayevent',  'created_by',  'modified_by',  'created_added',  'modified_date',  'ip_address' ),
+        'player_schedule'=>array( 'id','calender_type','name',  'location','who_for','team','favorite_team','players_id', 'description',  'start_date',  'end_date',  'is_approved',  'schedule_type',  'color',  'isalldayevent',  'created_by',  'modified_by',  'created_added',  'modified_date',  'ip_address' ),
 		'sports'=>array('id', 'user_id','sports_type_id','name','logo', 'status','recommend','description', 'created_date', 'modified_date', 'ip_address'),
 		'sports_dimensions'=>array('id', 'no_of_players', 'sports_id', 'played_players', 'duration', 'width', 'height', 'area','terms', 'notes', 'create_date', 'modified_date', 'created_by', 'modified_by', 'ip_address'),
 		'player_sports'=>array('id', 'players_id', 'sports_id', 'expert_id', 'created_date', 'ip_address', 'modified_date'),

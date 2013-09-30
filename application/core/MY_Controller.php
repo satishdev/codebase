@@ -25,8 +25,12 @@ class MY_Controller extends CI_Controller
 					  	}
 						 $this->image=$this->db->query("select image from players where id='".$this->userId."'")->row()->image;
 						 if($this->image==''){
+							 $this->img_status = 'empty';
+							 $this->org_image = '';
 							 $this->image=($this->gender=='m'?'css/images/empty_image.png':'css/images/female_image.png');
 						 }else{
+							 $this->img_status = 'not_empty';
+							 $this->org_image = 'images/'.$this->image;
 							 $this->image='images/th_'.$this->image;
 						 }
 						 

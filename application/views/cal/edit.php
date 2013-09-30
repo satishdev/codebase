@@ -50,7 +50,32 @@
              return ret;
         }
         $(document).ready(function() {
-            //debugger;
+            var id = '<?php echo $id;?>';
+			if(id!='0')
+			{
+				var calender_type = '<?php echo $event->calender_type;?>';
+				if(calender_type==4)
+				  {
+					$( "#lb_yr_team" ).find('select').addClass('required');
+					$( "#lb_yr_team" ).show();
+					$( "#lb_fv_team" ).find('select').addClass('required');
+					$( "#lb_fv_team" ).show();
+					$( "#what_team" ).find('.whattext').removeClass('required');
+					$( "#what_team" ).hide();
+				  }
+				  else
+				  {
+					$( "#lb_yr_team" ).find('select').removeClass('required');
+					$( "#lb_yr_team" ).hide();
+					$( "#lb_fv_team" ).find('select').removeClass('required');
+					$( "#lb_fv_team" ).hide();
+					$( "#what_team" ).show();
+					$( "#what_team" ).find('.whattext').addClass('required');
+				  }
+			}
+			
+			
+			//debugger;
             var DATA_FEED_URL = "<?php echo base_url();?>cal/datafeed";
             var arrT = [];
             var tt = "{0}:{1}";
@@ -157,7 +182,31 @@
                 var form = $("#fmEdit");             
                 error.appendTo(form).css(newpos);
             }
+			
+			$( "#calender_type" ).change(function() {
+			  //alert( $( "#calender_type" ).val() );
+			  if($( "#calender_type" ).val()==4)
+			  {
+				$( "#lb_yr_team" ).find('select').addClass('required');
+				$( "#lb_yr_team" ).show();
+				$( "#lb_fv_team" ).find('select').addClass('required');
+				$( "#lb_fv_team" ).show();
+				$( "#what_team" ).find('.whattext').removeClass('required');
+				$( "#what_team" ).hide();
+			  }
+			  else
+			  {
+				$( "#lb_yr_team" ).find('select').removeClass('required');
+				$( "#lb_yr_team" ).hide();
+				$( "#lb_fv_team" ).find('select').removeClass('required');
+				$( "#lb_fv_team" ).hide();
+				$( "#what_team" ).show();
+				$( "#what_team" ).find('.whattext').addClass('required');
+			  }
+			});	
         });
+		
+		
     </script>      
    <!-- <style type="text/css">     
     .calpick     {        
@@ -171,8 +220,10 @@
     </style>-->
   </head>
   <body>    
-    <div>      
-      <div class="toolBotton">           
+    <div style="height: 600px;width: 500px;">  
+                    
+      <div class="infocontainer">  
+          <div class="toolBotton" style="top:450px">           
         <a id="Savebtn" class="imgbtn" href="javascript:void(0);">                
           <span class="Save"  title="Save the calendar">Save(<u>S</u>)
           </span>          
@@ -187,23 +238,52 @@
           <span class="Close" title="Close the window" >Close
           </span></a>            
         </a>        
-      </div>                  
-      <div style="clear: both">         
-      </div>        
-      <div class="infocontainer">            
+      </div>    
         <form action="<?php echo site_url('players/schedule_edit'); ?>" class="fform" id="fmEdit" method="post">  
-		            <input id="id" name="id" type="hidden" value="<?php echo isset($event)?$event->id:"" ?>" />    
-          <label>                    
-            <span>                        Subject              
-            </span>                    
-            <div id="calendarcolor">
-            </div>
-            <input MaxLength="200" class="required safe" id="Subject" name="Subject" style="width:69%; margin-left: 3px;" type="text" value="<?php echo isset($event)?$event->description:"" ?>" />                     
-            <input id="colorvalue" name="colorvalue" type="hidden" value="<?php echo isset($event)?$event->color:"" ?>" />                
+              <input id="id" name="id" type="hidden" value="<?php echo isset($event)?$event->id:"" ?>" />    
+			<label><span style='color:#696969;font-weight: bold;'>Calender Types: </span>                    
+
+			<select id='calender_type' name='calender_type' class="required safe">
+				<option value='1' <?php if($event->calender_type == 1) echo 'selected=selected';?>>Free Time</option>
+				<option value='2'<?php if($event->calender_type == 2) echo 'selected=selected';?>>Events</option>
+				<option value='3'<?php if($event->calender_type == 3) echo 'selected=selected';?>>Match(Single)</option>
+				<option value='4'<?php if($event->calender_type == 4) echo 'selected=selected';?>>Match(Team)</option>
+			</select>
+			</label>
+		<label id='lb_yr_team' style='display:none'><span style='color:#696969;font-weight: bold;'>Your Team: </span>                    
+
+			<select id='team' name='team' class="required safe">
+				<option value='' >Select Team</option>
+				<?php 
+				foreach($teams as $tk=>$tv)
+				{
+				?>
+					<option value='<?php echo $tv['id'];?>' <?php if($event->team == $tv['id']) echo 'selected=selected';?>><?php echo $tv['name'];?></option>
+				<?php	
+				}
+				?>
+			</select>
+			</label>
+			<label id='lb_fv_team' style='display:none'><span style='color:#696969;font-weight: bold;'>Favorite team: </span>                    
+
+			<select id='favorite_team' name='favorite_team' class="required safe">
+				<option value='' >Select opponent team</option>
+				<?php 
+				foreach($teams as $tk=>$tv)
+				{
+				?>
+					<option value='<?php echo $tv['id'];?>' <?php if($event->favorite_team == $tv['id']) echo 'selected=selected';?>><?php echo $tv['name'];?></option>
+				<?php	
+				}
+				?>
+			</select>
+			</label>			
+          <label id='what_team' style='display:block'>                    
+            <span>What:</span>                    
+            <input MaxLength="200" class="required safe whattext" id="Subject" name="Subject" style="width:69%; margin-left: 3px;" type="text" value="<?php echo isset($event)?$event->name:"" ?>" />                     
           </label>                 
           <label>                    
-            <span>Time
-            </span>                    
+            <span>When:</span>                    
             <div>  
               <?php if(isset($event)){
                   $sarr = explode(" ", php2JsTime(mySql2PhpTime($event->start_date)));
@@ -219,14 +299,20 @@
             </div>                
           </label>                 
           <label>                    
-            <span>                        Location:
-            </span>                    
-            <input MaxLength="200" id="Location" name="Location" style="width:76%;" type="text" value="<?php echo isset($event)?$event->location:""; ?>" />                 
-          </label>                 
+            <span>Where</span>                    
+            <input MaxLength="200" id="location" name="location" style="width:76%;" type="text" value="<?php echo isset($event)?$event->location:""; ?>" />                 
+          </label>
+			<label><span style='color:#696969;font-weight: bold;'>Who: </span>                    
+
+			<select id='who_for' name='who_for' class="required safe">
+				<option value='1'<?php if($event->who_for == 1) echo 'selected=selected';?>>Public</option>
+				<option value='2'<?php if($event->who_for == 2) echo 'selected=selected';?>>sFriends</option>
+				<option value='3'<?php if($event->who_for == 3) echo 'selected=selected';?>>Teams or only few selected friends</option>
+			</select>
+			</label>	
           <label>                    
-            <span>                        Remark:
-            </span>                    
-<textarea cols="20" id="Description" name="Description" rows="2" style="width:76%; height:70px">
+            <span>Notes:</span>                    
+<textarea cols="20" id="description" name="description" rows="2" style="width:76%; height:70px">
 <?php echo isset($event)?$event->description:""; ?>
 </textarea>                
           </label>                

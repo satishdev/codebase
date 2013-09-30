@@ -118,7 +118,7 @@ if (isset($this->userType) && $this->userType == 2) {
 
                     </li>
 
-                    <li><a class="item schedule_match" rel="1">Schedule Match</a></li>
+                    <li><a class="item schedule_match" rel="1">sFriend Expertise level <!--Schedule Match--></a></li>
 
                 </ul>
 
@@ -148,7 +148,7 @@ if (isset($this->userType) && $this->userType == 2) {
 
                     <li><a class="item" href="<?php echo site_url('teams/myteams'); ?>">My Teams</a></li>
 
-                    <li><a class="item schedule_match" rel="2">Schedule Match</a></li>
+                    <li><a class="item schedule_match" rel="2">sFriend Expertise level <!--Schedule Match--></a></li>
 
                 </ul>
 
@@ -170,7 +170,7 @@ if (isset($this->userType) && $this->userType == 2) {
 
             </li>
 
-            <li><a class="item jitem" href="<?php echo site_url('cb/allclubs'); ?>">Golf Courses</a>
+            <li><a class="item jitem" href="<?= base_url() ?>teetime_golfcourse/golf_course/">Golf Courses</a>
 
                 <ul>
 
