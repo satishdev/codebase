@@ -109,6 +109,11 @@ $data['eventss']='';
 }
  $this->load->view('cal/edit', $data);
 }
+
+function export_view($id=0){
+ $this->load->view('cal/export_view');
+}
+
 function viewdetails($id=0){
     $sql=$this->db->query("select * from player_schedule where id='".$id."'");
     if($sql->num_rows()>0){
