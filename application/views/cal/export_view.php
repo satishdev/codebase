@@ -214,10 +214,17 @@
                             ?>                    
                             From: <input MaxLength="10" class="required date" id="stpartdate" name="stpartdate" style="padding-left:2px;width:90px;" type="text" value="<?php echo isset($event) ? $sarr[0] : ""; ?>" />                       
                             To: <input MaxLength="10" class="required date" id="etpartdate" name="etpartdate" style="padding-left:2px;width:90px;" type="text" value="<?php echo isset($event) ? $earr[0] : ""; ?>" />                       
-                            <a id="Savebtn" class="imgbtn" href="javascript:void(0);">                
-                                <span class="Save" style="display: inline"  title="Save the calendar">Export
-                                </span>          
-                            </a>  
+                            <div style="padding-top: 10px">
+                            Export Type: 
+                            <input type="radio" name="export_type" />CSV
+                            <input type="radio" name="export_type" />ICS
+                            </div>
+                            <span style="padding-top: 10px">
+                                <a id="Savebtn" style="margin-left: 0" class="imgbtn" href="javascript:void(0);">                
+                                    <span class="Save" style="display: inline" title="Save the calendar">Export
+                                    </span>          
+                                </a>  
+                            </span>
                             <label class="checkp"> 
                                 <input id="IsAllDayEvent" name="IsAllDayEvent" type="hidden" value="1" <?php if (isset($event) && $event->isalldayevent != 0) {
                                 echo "checked";

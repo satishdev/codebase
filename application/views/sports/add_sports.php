@@ -56,8 +56,8 @@ function sp_expertLevelChange(me){
 function addCustomSport(){
     var sport = [];
 
-    sport.push('<li><label for="name">Name</label><input id="name" name="name" class="text field" value="" type="text"/></li>');
     sport.push('<li><label for="sports_type_id">Sport Type</label><select name="sports_type_id" id="sports_type_id" class="text field">'+wesport.sports_list+'</select></li>');
+    sport.push('<li><label for="name">Name</label><input id="name" name="name" class="text field" value="" type="text"/></li>');
     sport.push('<li><label for="description">Description</label><textarea name="description" id="description"></textarea></li>');
     sport.push('<li><label for="logo1">Logo</label><input type="file" id="logo1" name="logo1" class="field"  value=""/></li>');
     sport.push('<li class="no-lbl"><input type="checkbox" id="recommend" name="recommend" value="1" /><label for=recommend>Recommend</label></li>');

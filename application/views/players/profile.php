@@ -3,16 +3,17 @@
         <li id="content_header" style="height: 21px;" >
             <b>General Info</b> &nbsp;<?php if($this->userId==$id){?><a href="<?php echo site_url('players/edit');?>">Edit</a><?php } ?>
         </li>
-		<!-- <li>
-            <label class="row_label">About me</label><span class="row_val"> <?php echo $u_details->about_me!=''? $u_details->about_me:'--';?> &nbsp;</span>
-        </li>-->
+		 
         <li>
             <label class="row_label">First Name</label> <span class="row_val"> <?php echo $u_details->first_name;?> &nbsp; </span>
         </li>
         <li>
             <label class="row_label">Last Name</label><span class="row_val"><?php echo $u_details->last_name;?> &nbsp;</span>
         </li>
-		 <li>
+        <li>
+            <label class="row_label">About me</label><span class="row_val"> <?php echo $u_details->about_me!=''? $u_details->about_me:'--';?> &nbsp;</span>
+        </li>
+        <li>
             <label class="row_label">Gender</label><span class="row_val"><?php echo $u_details->gender=='m'?'Male':'Female';?> &nbsp;</span>
         </li>
 		 <li>

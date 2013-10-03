@@ -100,10 +100,10 @@ $(document).ready(function() {
 		<!-- <li>
             <label for="address">Address</label>
 			<textarea id="address" name="address"><?php echo $u_details->address;?></textarea>
-        </li><li>
+        </li>--><li>
             <label for="about_me">About me</label>
 			<textarea id="about_me" name="about_me"><?php echo $u_details->about_me;?></textarea>
-        </li>-->
+        </li>
 		<?php /*?><li>
 		<label for="dob">DOB</label>
                 <input type="text" id="dob" name="dob" readonly="readonly" class="text field apply_datepicker" value="<?php echo date('Y-m-d',strtotime($u_details->dob));?>"/>
