@@ -51,6 +51,10 @@
         }
         $(document).ready(function() {
             var id = '<?php echo $id;?>';
+			$( "#lb_yr_team" ).find('select').removeClass('required');
+			$( "#lb_yr_team" ).hide();
+			$( "#lb_fv_team" ).find('select').removeClass('required');
+			$( "#lb_fv_team" ).hide();
 			if(id!='0')
 			{
 				var calender_type = '<?php echo $event->calender_type;?>';

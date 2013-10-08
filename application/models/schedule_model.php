@@ -217,5 +217,87 @@ function add_schedule_match($uid,$data=array()){
 		$this->email->send();
 		}
 	}
+	function schedule_export($post){
+		 		 
+			$st_date = date('Y-m-d',strtotime($post['stpartdate']));
+			$end_date = date('Y-m-d',strtotime($post['etpartdate']));
+			$user_id = $post['userId'];
+			$sql="select ps.calender_type,ps.name,ps.who_for,t1.name as your_team,t2.name as fav_team,ps.description,
+				concat(date_format(ps.start_date,'%Y%m%d'),'T',date_format(ps.start_date,'%H%i%s'),'Z') as st_date,
+				concat(date_format(ps.end_date,'%Y%m%d'),'T',date_format(ps.start_date,'%H%i%s'),'Z') as en_date,
+				p.email as player_email,concat(first_name,' ',last_name) as player_name
+				from player_schedule ps
+				left join players p on ps.players_id = p.id
+				left join teams t1 on t1.id = ps.team
+				left join teams t2 on t2.id = ps.favorite_team
+				where date_format(ps.start_date,'%Y-%m-%d')>='".$st_date."' and 
+				date_format(ps.end_date ,'%Y-%m-%d')<='".$end_date."'
+				and ps.players_id='".$user_id."'";
+            $res = $this->db->query($sql);
+            $p_shedule=$res->result();
+//print_r($p_shedule);
+//die;
+
+//print_r($p_shedule);
+//die;			
+			if(!empty($p_shedule))
+			{
+				$stringData="BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Raja Shekar Reddy
+X-WR-TIMEZONE:Asia/Calcutta\r\n";
+				$ics_sequence=1;
+				foreach($p_shedule as $key=>$value)
+				{
+				
+$stringData.="BEGIN:VEVENT
+DTSTART;VALUE=DATE:".$value->st_date."
+DTEND;VALUE=DATE:".$value->en_date."
+LAST-MODIFIED:".$value->st_date."
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:".$value->description."
+UID:".$ics_sequence."
+END:VEVENT
+";
+/*$stringData.="BEGIN:VEVENT
+DTSTART:".$value->st_date."
+DTEND:".$value->en_date."
+DTSTAMP:".date('Ymdhis')."
+UID:d4tr8utl1ajejvk4aopje20ph0@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=".$value->player_name.";X-NUM-GUESTS=0:mailto:".$value->player_email."
+CREATED:".date('Ymd').'T'.date('His').'Z'"
+DESCRIPTION:\n
+LAST-MODIFIED:".date('Ymd').'T'.date('His').'Z'"
+LOCATION:".$value->player_name."
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Bus. rule review
+TRANSP:OPAQUE
+END:VEVENT";*/
+
+$ics_sequence++;
+				}
+$stringData.="END:VCALENDAR";
+			}
+$fname = 'schedule_'.strtotime("now").'.ics'; 
+$flname='uploads/ics/'.$fname;//-$uid		
+$fh = fopen($flname, 'w') or die("can't open file");
+$writedata=fwrite($fh, $stringData);
+fclose($fh);
+chmod($myFile,0666); 
+//echo $stringData;
+
+header('Content-type: application/force-download');
+header('Content-Transfer-Encoding: Binary');
+header('Content-length: ' . filesize($flname));
+header('Content-disposition: attachment; filename="' . $fname . '"');
+//readfile($flname);			
+			
+			
+	}
 }
 ?>

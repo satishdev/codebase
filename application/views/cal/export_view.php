@@ -103,32 +103,12 @@
                             $("#etparttime").val(getHM(DateAdd("h", 1, d))).show();
                         }
                     });
-                    if (check[0].checked) {
-                        $("#stparttime").val("00:00").hide();
-                        $("#etparttime").val("00:00").hide();
-                    }
+                    
                     $("#Savebtn").click(function() {
                         $("#fmEdit").submit();
                     });
                     $("#Closebtn").click(function() {
                         CloseModelWindow();
-                    });
-                    $("#Deletebtn").click(function() {
-                        if (confirm("Are you sure to remove this event")) {
-                            var param = [{"name": "calendarId", value: $('.fform #id').val()}];
-                            $.post("<?php echo base_url(); ?>cal/remove",
-                                    param,
-                                    function(data) {
-                                        if (data.IsSuccess) {
-                                            alert(data.Msg);
-                                            CloseModelWindow(null, true);
-                                        }
-                                        else {
-                                            alert("Error occurs.\r\n" + data.Msg);
-                                        }
-                                    }
-                            , "json");
-                        }
                     });
 
                     $("#stpartdate,#etpartdate").datepicker({picker: "<button class='calpick'></button>"});
@@ -137,7 +117,6 @@
                     {
                         cv = "-1";
                     }
-                    $("#calendarcolor").colorselect({title: "Color", index: cv, hiddenid: "colorvalue"});
                     //to define parameters of ajaxform
                     var options = {
                         beforeSubmit: function() {
@@ -184,16 +163,6 @@
                     }
                 });
             </script>      
-           <!-- <style type="text/css">     
-            .calpick     {        
-                width:16px;   
-                height:16px;     
-                border:none;        
-                cursor:pointer;        
-                background:url("sample-css/cal.gif") no-repeat center 2px;        
-                margin-left:-22px;    
-            }      
-            </style>-->
     </head>
     <body>    
         <div>      
@@ -202,8 +171,7 @@
             <div style="clear: both">         
             </div>        
             <div class="infocontainer">            
-                <form action="<?php echo site_url('players/schedule_edit'); ?>" class="fform" id="fmEdit" method="post">  
-                    <input id="id" name="id" type="hidden" value="<?php echo isset($event) ? $event->id : "" ?>" />    
+                <form action="<?php echo site_url('players/schedule_export'); ?>" class="fform" id="fmEdit" method="post">  
                     <label>                    
                         <div>  
                             <?php
@@ -216,8 +184,9 @@
                             To: <input MaxLength="10" class="required date" id="etpartdate" name="etpartdate" style="padding-left:2px;width:90px;" type="text" value="<?php echo isset($event) ? $earr[0] : ""; ?>" />                       
                             <div style="padding-top: 10px">
                             Export Type: 
-                            <input type="radio" name="export_type" />CSV
-                            <input type="radio" name="export_type" />ICS
+                            <input type="radio" name="export_type" value='ics' checked='true'/>ICS
+							<!--<input type="radio" name="export_type" value='csv' />CSV-->
+                            
                             </div>
                             <span style="padding-top: 10px">
                                 <a id="Savebtn" style="margin-left: 0" class="imgbtn" href="javascript:void(0);">                
