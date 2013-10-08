@@ -832,7 +832,7 @@ if(@$city_wise!='yes' && @$area_wise!='yes')
 
 	<li>|<a href="<?php echo base_url()?>teetime_golfcourse/sorting/price">Price</a> </li>
 
-	<li>|<a href="<?php echo base_url()?>teetime_golfcourse/sorting/rating">User Rating</a></li>
+	<!--<li>|<a href="<?php echo base_url()?>teetime_golfcourse/sorting/rating">User Rating</a></li>-->
 
 	<li class="last_li">|<a href="<?php echo base_url()?>teetime_golfcourse/sorting/favorite">Favorite</a></li>
 

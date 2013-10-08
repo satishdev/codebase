@@ -202,6 +202,10 @@
                 var url =base_url+"cal/export_view";
                 OpenModelWindow(url,{ width: 500, height: 400, caption: "Export"});
             });
+            $(".jimport_link").click(function(e) {
+                var url2 =base_url+"cal/import_view";
+                OpenModelWindow(url2,{ width: 500, height: 400, caption: "Import Calendar"});
+            });
             //go to today
             $("#showtodaybtn").click(function(e) {
                 var p = $("#gridcontainer").gotoDate().BcalGetOp();
@@ -236,7 +240,11 @@
       <div id="calhead" style="padding-left:1px;padding-right:1px;">          
             <div class="cHead">
                 <div class="ftitle"><?php echo  anchor('',ucwords($this->userFname.' '.$this->userLname)); ?> Calendar 
+                    <span style="float: right;width: 88px ">
+                    <span class="jimport_link" style="float: left; cursor: pointer">Import</span>
+                    <span style="padding: 0 4px">|</span>
                     <span class="jexport_link" style="float: right; cursor: pointer">Export</span></div>
+                    </span>
             <div id="loadingpannel" class="ptogtitle loadicon" style="display: none;">Loading data...</div>
              <div id="errorpannel" class="ptogtitle loaderror" style="display: none;">Sorry, could not load your data, please try again later</div>
             </div>          
