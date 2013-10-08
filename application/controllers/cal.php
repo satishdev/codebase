@@ -122,6 +122,11 @@ function export_view($id=0){
  $this->load->view('cal/export_view');
 }
 
+function import_view($id=0){
+$data['links_js_css']='players/links_js_css';
+ $this->load->view('cal/import_view',$data);
+}
+
 function viewdetails($id=0){
     $sql=$this->db->query("select * from player_schedule where id='".$id."'");
     if($sql->num_rows()>0){
