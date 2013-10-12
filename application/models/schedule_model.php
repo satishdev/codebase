@@ -222,7 +222,7 @@ function add_schedule_match($uid,$data=array()){
 			$st_date = date('Y-m-d',strtotime($post['stpartdate']));
 			$end_date = date('Y-m-d',strtotime($post['etpartdate']));
 			$user_id = $post['userId'];
-			$sql="select ps.id as ps_id,ps.calender_type,ps.name,ps.who_for,t1.name as your_team,t2.name as fav_team,ps.description,
+			$sql="select ps.calender_type,ps.name,ps.who_for,t1.name as your_team,t2.name as fav_team,ps.description,
 				concat(date_format(ps.start_date,'%Y%m%d'),'T',date_format(ps.start_date,'%H%i%s'),'Z') as st_date,
 				concat(date_format(ps.end_date,'%Y%m%d'),'T',date_format(ps.start_date,'%H%i%s'),'Z') as en_date,
 				p.email as player_email,concat(first_name,' ',last_name) as player_name
@@ -242,12 +242,12 @@ function add_schedule_match($uid,$data=array()){
 //die;			
 			if(!empty($p_shedule))
 			{
-$stringData="BEGIN:VCALENDAR
+				$stringData="BEGIN:VCALENDAR
 PRODID:-//Google Inc//Google Calendar 70.9054//EN
 VERSION:2.0
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:TEST
+X-WR-CALNAME:Raja Shekar Reddy
 X-WR-TIMEZONE:Asia/Calcutta\r\n";
 				$ics_sequence=1;
 				foreach($p_shedule as $key=>$value)
@@ -260,7 +260,7 @@ LAST-MODIFIED:".$value->st_date."
 SEQUENCE:0
 STATUS:CONFIRMED
 SUMMARY:".$value->description."
-UID:".strtotime("now").$value->ps_id."
+UID:".$ics_sequence."
 END:VEVENT
 ";
 /*$stringData.="BEGIN:VEVENT
@@ -288,14 +288,19 @@ $flname='uploads/ics/'.$fname;//-$uid
 $fh = fopen($flname, 'w') or die("can't open file");
 $writedata=fwrite($fh, $stringData);
 fclose($fh);
-chmod($flname,0777); 
-//echo $stringData;
+chmod($flname,0666); 
+return $fname;
 
-header('Content-type: application/force-download');
+//exit;
+
+//echo $stringData;
+//$this->load->helper('download_helper');
+//$this->download_helper->force_download($flname);
+/*header('Content-type: application/force-download');
 header('Content-Transfer-Encoding: Binary');
 header('Content-length: ' . filesize($flname));
 header('Content-disposition: attachment; filename="' . $fname . '"');
-//readfile($flname);			
+readfile($flname);	*/		
 			
 			
 	}
