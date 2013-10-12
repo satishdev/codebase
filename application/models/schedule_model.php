@@ -288,14 +288,19 @@ $flname='uploads/ics/'.$fname;//-$uid
 $fh = fopen($flname, 'w') or die("can't open file");
 $writedata=fwrite($fh, $stringData);
 fclose($fh);
-chmod($myFile,0666); 
-//echo $stringData;
+chmod($flname,0666); 
+return $fname;
 
-header('Content-type: application/force-download');
+//exit;
+
+//echo $stringData;
+//$this->load->helper('download_helper');
+//$this->download_helper->force_download($flname);
+/*header('Content-type: application/force-download');
 header('Content-Transfer-Encoding: Binary');
 header('Content-length: ' . filesize($flname));
 header('Content-disposition: attachment; filename="' . $fname . '"');
-//readfile($flname);			
+readfile($flname);	*/		
 			
 			
 	}

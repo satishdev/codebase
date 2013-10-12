@@ -147,6 +147,11 @@
                     $("#fmEdit").validate({
                         submitHandler: function(form) {
                             $("#fmEdit").ajaxSubmit(options);
+                            setTimeout(function(){
+                                var file_name = '<?php echo $this->session->userdata('filename');?>';
+                                $('.dwnld_link').html('<a href="../uploads/ics/'+file_name+'">Download ICS File</a>');
+                            },1000);
+                            
                         },
                         errorElement: "div",
                         errorClass: "cusErrorPanel",
@@ -202,7 +207,8 @@
                         </div>                
                     </label>                 
                 </form>         
-            </div>         
+            </div>
+            <div class="dwnld_link"></div>
         </div>
     </body>
 </html>
