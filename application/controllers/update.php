@@ -257,7 +257,7 @@ class update extends MY_Controller {
 								'AreaNM' => $Country->Regions->Region->Areas->Area->nm
 							);
 							$this->db->insert('CourseAreas', $dataCourseAreas);
-							echo '<pre>'; print_r(); echo '</pre>';
+							//echo '<pre>'; print_r(); echo '</pre>';
 						}
 					}else{
 						foreach($Country->Regions->Region->Areas->Area as $Area){

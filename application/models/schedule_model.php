@@ -222,9 +222,11 @@ function add_schedule_match($uid,$data=array()){
 			$st_date = date('Y-m-d',strtotime($post['stpartdate']));
 			$end_date = date('Y-m-d',strtotime($post['etpartdate']));
 			$user_id = $post['userId'];
-			$sql="select ps.calender_type,ps.name,ps.who_for,t1.name as your_team,t2.name as fav_team,ps.description,
+			$sql="select ps.id as ps_id,ps.calender_type,ps.name,ps.who_for,t1.name as your_team,t2.name as fav_team,ps.description,
 				concat(date_format(ps.start_date,'%Y%m%d'),'T',date_format(ps.start_date,'%H%i%s'),'Z') as st_date,
 				concat(date_format(ps.end_date,'%Y%m%d'),'T',date_format(ps.start_date,'%H%i%s'),'Z') as en_date,
+				#date_format(ps.start_date,'%Y%m%d')as st_date,
+				#date_format(ps.end_date,'%Y%m%d')as en_date,
 				p.email as player_email,concat(first_name,' ',last_name) as player_name
 				from player_schedule ps
 				left join players p on ps.players_id = p.id
@@ -235,73 +237,53 @@ function add_schedule_match($uid,$data=array()){
 				and ps.players_id='".$user_id."'";
             $res = $this->db->query($sql);
             $p_shedule=$res->result();
-//print_r($p_shedule);
-//die;
-
-//print_r($p_shedule);
-//die;			
 			if(!empty($p_shedule))
 			{
-				$stringData="BEGIN:VCALENDAR
-PRODID:-//Google Inc//Google Calendar 70.9054//EN
-VERSION:2.0
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Raja Shekar Reddy
-X-WR-TIMEZONE:Asia/Calcutta\r\n";
-				$ics_sequence=1;
+
+$event_data="BEGIN:VCALENDAR\n";
 				foreach($p_shedule as $key=>$value)
 				{
-				
-$stringData.="BEGIN:VEVENT
+$uid = date('ymdhis').$value->ps_id.'@gmail.com';
+$last_modfied = date('Ymd');  				
+$event_data.="CALSCALE:GREGORIAN
+VERSION:2.0
+PRODID:-//CALENDARSERVER.ORG//NONSGML Version 1//EN
+METHOD:REQUEST
+BEGIN:VEVENT
 DTSTART;VALUE=DATE:".$value->st_date."
 DTEND;VALUE=DATE:".$value->en_date."
-LAST-MODIFIED:".$value->st_date."
+LAST-MODIFIED:".$last_modfied."
 SEQUENCE:0
 STATUS:CONFIRMED
 SUMMARY:".$value->description."
-UID:".$ics_sequence."
+UID:".$uid."
 END:VEVENT
 ";
-/*$stringData.="BEGIN:VEVENT
-DTSTART:".$value->st_date."
-DTEND:".$value->en_date."
-DTSTAMP:".date('Ymdhis')."
-UID:d4tr8utl1ajejvk4aopje20ph0@google.com
-ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=".$value->player_name.";X-NUM-GUESTS=0:mailto:".$value->player_email."
-CREATED:".date('Ymd').'T'.date('His').'Z'"
-DESCRIPTION:\n
-LAST-MODIFIED:".date('Ymd').'T'.date('His').'Z'"
-LOCATION:".$value->player_name."
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Bus. rule review
-TRANSP:OPAQUE
-END:VEVENT";*/
-
-$ics_sequence++;
 				}
-$stringData.="END:VCALENDAR";
-			}
-$fname = 'schedule_'.strtotime("now").'.ics'; 
+$event_data.="END:VCALENDAR";
+			
+$fname = 'schedule_'.date('ymdhis').'.ics'; 
+//$fname = 'schedule_'.date('ymdhis').'.txt'; 
 $flname='uploads/ics/'.$fname;//-$uid		
 $fh = fopen($flname, 'w') or die("can't open file");
-$writedata=fwrite($fh, $stringData);
+$writedata=fwrite($fh, $event_data);
 fclose($fh);
-chmod($flname,0666); 
-return $fname;
-
-//exit;
-
-//echo $stringData;
-//$this->load->helper('download_helper');
-//$this->download_helper->force_download($flname);
-/*header('Content-type: application/force-download');
+chmod($flname,0644); 
+$this->session->set_userdata('filename',$fname);
+/*header('Content-type: text/calendar; charset=utf-8');
 header('Content-Transfer-Encoding: Binary');
-header('Content-length: ' . filesize($flname));
-header('Content-disposition: attachment; filename="' . $fname . '"');
-readfile($flname);	*/		
-			
+header("Pragma: no-cache");
+header("Expires: 0");
+header('Content-length:'.filesize($flname));
+header('Content-disposition: attachment; filename="'.$fname.'"');
+readfile($flname);*/
+
+return "success";			
+			}
+			else
+			{
+				return "No Events found with the selected dates";
+			}			
 			
 	}
 }

@@ -57,7 +57,14 @@
 			$( "#lb_fv_team" ).hide();
 			if(id!='0')
 			{
-				var calender_type = '<?php echo $event->calender_type;?>';
+				var calender_type = 0;
+				<?php if(isset($event->calender_type))
+				{
+				?>
+					var calender_type = '<?php echo $event->calender_type;?>';
+				<?php 
+				}
+				?>
 				if(calender_type==4)
 				  {
 					$( "#lb_yr_team" ).find('select').addClass('required');
@@ -248,10 +255,10 @@
 			<label><span style='color:#696969;font-weight: bold;'>Calender Types: </span>                    
 
 			<select id='calender_type' name='calender_type' class="required safe">
-				<option value='1' <?php if($event->calender_type == 1) echo 'selected=selected';?>>Free Time</option>
-				<option value='2'<?php if($event->calender_type == 2) echo 'selected=selected';?>>Events</option>
-				<option value='3'<?php if($event->calender_type == 3) echo 'selected=selected';?>>Match(Single)</option>
-				<option value='4'<?php if($event->calender_type == 4) echo 'selected=selected';?>>Match(Team)</option>
+				<option value='1' <?php if(isset($event->calender_type) and ($event->calender_type == 1)) echo 'selected=selected';?>>Free Time</option>
+				<option value='2'<?php if(isset($event->calender_type) and ($event->calender_type == 2)) echo 'selected=selected';?>>Events</option>
+				<option value='3'<?php if(isset($event->calender_type) and ($event->calender_type == 3)) echo 'selected=selected';?>>Match(Single)</option>
+				<option value='4'<?php if(isset($event->calender_type) and ($event->calender_type == 4)) echo 'selected=selected';?>>Match(Team)</option>
 			</select>
 			</label>
 		<label id='lb_yr_team' style='display:none'><span style='color:#696969;font-weight: bold;'>Your Team: </span>                    
@@ -309,9 +316,9 @@
 			<label><span style='color:#696969;font-weight: bold;'>Who: </span>                    
 
 			<select id='who_for' name='who_for' class="required safe">
-				<option value='1'<?php if($event->who_for == 1) echo 'selected=selected';?>>Public</option>
-				<option value='2'<?php if($event->who_for == 2) echo 'selected=selected';?>>sFriends</option>
-				<option value='3'<?php if($event->who_for == 3) echo 'selected=selected';?>>Teams or only few selected friends</option>
+				<option value='1'<?php if(isset($event->who_for) and  ($event->who_for== 1)) echo 'selected=selected';?>>Public</option>
+				<option value='2'<?php if(isset($event->who_for) and  ($event->who_for== 2)) echo 'selected=selected';?>>sFriends</option>
+				<option value='3'<?php if(isset($event->who_for) and  ($event->who_for== 3)) echo 'selected=selected';?>>Teams or only few selected friends</option>
 			</select>
 			</label>	
           <label>                    

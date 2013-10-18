@@ -243,7 +243,7 @@
                     <span style="float: right;width: 88px ">
                     <span class="jimport_link" style="float: left; cursor: pointer">Import</span>
                     <span style="padding: 0 4px">|</span>
-                    <span class="jexport_link" style="float: right; cursor: pointer">Export</span></div>
+                    <span style="float: right; cursor: pointer"><a class="" href="<?php echo site_url('players/export_view'); ?>" style="color:#15428B">Export</a></span></div>
                     </span>
             <div id="loadingpannel" class="ptogtitle loadicon" style="display: none;">Loading data...</div>
              <div id="errorpannel" class="ptogtitle loaderror" style="display: none;">Sorry, could not load your data, please try again later</div>

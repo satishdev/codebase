@@ -257,8 +257,8 @@ class updateDB extends MY_Controller {
 		
 		# Ngay cuoi cung		
 		$ngayCuoiCung 		=  cal_days_in_month(CAL_GREGORIAN, $now["mon"], $now["year"]);
-		echo "<pre>"; print_r($arr[0]->dates); echo "</pre>";	
-		echo "Begin update date: ".date('Y-m-d',$thoiGianHienTai)."<br>";
+		//echo "<pre>"; print_r($arr[0]->dates); echo "</pre>";	
+		//echo "Begin update date: ".date('Y-m-d',$thoiGianHienTai)."<br>";
 		$are = $this->getAre();
 		//echo "<pre>"; print_r($are); echo "</pre>";
 		#for($i=$ngayHienTai;$i<=$ngayCuoiCung;$i++){

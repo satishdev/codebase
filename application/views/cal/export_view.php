@@ -107,6 +107,10 @@
                     $("#Savebtn").click(function() {
                         $("#fmEdit").submit();
                     });
+					$(".exp_event").click(function() {
+                        $('.dwnld_link').html('')
+                    });
+					
                     $("#Closebtn").click(function() {
                         CloseModelWindow();
                     });
@@ -144,7 +148,7 @@
                     $.validator.addMethod("safe", function(value, element) {
                         return this.optional(element) || /^[^$\<\>]+$/.test(value);
                     }, "$<> not allowed");
-                    $("#fmEdit").validate({
+                    /*$("#fmEdit").validate({
                         submitHandler: function(form) {
                             $("#fmEdit").ajaxSubmit(options);
                             setTimeout(function(){
@@ -158,7 +162,7 @@
                         errorPlacement: function(error, element) {
                             showerror(error, element);
                         }
-                    });
+                    });*/
                     function showerror(error, target) {
                         var pos = target.position();
                         var height = target.height();
@@ -178,7 +182,10 @@
             <div class="infocontainer">            
                 <form action="<?php echo site_url('players/schedule_export'); ?>" class="fform" id="fmEdit" method="post">  
                     <label>                    
-                        <div>  
+                        <div id='content_header'>
+							<div class='hdr-text'>Export Events</div>
+						</div>
+						<div>  
                             <?php
                             if (isset($event)) {
                                 $sarr = explode(" ", php2JsTime(mySql2PhpTime($event->start_date)));
@@ -194,21 +201,35 @@
                             
                             </div>
                             <span style="padding-top: 10px">
-                                <a id="Savebtn" style="margin-left: 0" class="imgbtn" href="javascript:void(0);">                
+                               <!-- <a id="Savebtn" style="margin-left: 0" class="imgbtn" href="javascript:void(0);">                
                                     <span class="Save" style="display: inline" title="Save the calendar">Export
                                     </span>          
-                                </a>  
+                                </a>  -->
+								<input class="button_img exp_event" type="submit" value="submit" name="submit" />
                             </span>
-                            <label class="checkp"> 
-                                <input id="IsAllDayEvent" name="IsAllDayEvent" type="hidden" value="1" <?php if (isset($event) && $event->isalldayevent != 0) {
-                                echo "checked";
-                            } ?>/>                  
-                            </label>                    
+                                              
                         </div>                
                     </label>                 
                 </form>         
             </div>
-            <div class="dwnld_link"></div>
+            <?php 
+			if(isset($result_set))
+			{
+				if($result_set =='success')
+				{
+					$fname=$this->session->userdata('filename');
+					//echo "<a href='../uploads/ics/".$fname."'>Download ICS File</a>";
+					
+					echo "<div class='dwnld_link' style='font-size:12px; font-family:Verdana, Arial, Helvetica, sans-serif'><a href='../uploads/ics/".$fname."'>Download ICS File</a></div>";
+				}
+				else
+				{
+			?>
+				<div class="dwnld_link" style="color:#FF0000; font-size:12px; font-family:Verdana, Arial, Helvetica, sans-serif"> <?php echo $result_set;?></div>
+			<?php	
+				}
+			}
+			?>
         </div>
     </body>
 </html>
