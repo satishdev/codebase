@@ -37,11 +37,11 @@
 				$btnText = "Approve";
 				$ntype = 5;
 				}else if($row->schedule_type=='6'){
-				$msg = "Please update your match Result";
+				$msg = "Please update ". $row->sport_name." match Result between you and ".$row->cname." on ".$row->start_date." from ".$row->end_date." ";
 				$btnText = "Approve";
 				$ntype = 6;
 				}else if($row->schedule_type=='7'){
-				$msg = "Please update your match Result";
+				$msg = "Please update match Result between ".$row->t1_name." and ".$row->t2_name." on ".$row->start_date." from ".$row->end_date."";
 				$btnText = "Approve";
 				$ntype = 7;
 				}
@@ -84,7 +84,7 @@
             </div>
         </div>
 		<?php }  else if($row->schedule_type=='7'){
-		$res_match=$this->users_model->is_schedule_win_loss($row->sch_id);?>
+		$res_match=$this->users_model->is_schedule_win_loss($row->sch_id,$this->userId);?>
 		<div class="msg_actions" rel='<?php echo $row->id;?>' uid='<?php echo $row->id;?>' ntype="<?php echo $ntype;?>">
         	<div class='n_actions'>
             		<!--<div class='act_wrap'><a class='n_act btn_schedule main' status='1'>Won</a></div>

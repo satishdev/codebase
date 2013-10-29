@@ -277,7 +277,7 @@ $links_js_css='players/links_js_css';
           </div><?php */?>
 
 
-		  <?php $this->load->view('menu_items_new'); ?>
+		  <?php $this->load->view('common/menu_items_new'); ?>
 
 
 

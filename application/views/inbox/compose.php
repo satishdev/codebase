@@ -25,11 +25,14 @@ $(document).ready(function() {
     <ul class='wesp-form'>	   
         <li class='overflow'>
             <label for="to">To</label>
+			<?php 
+			$friends=$this->users_model->composeFriends($this->userId); 
+			?>
            <!-- <input id="to" name="to" class="text" value=""/>-->
 		    <select name='to_id[]' id='to_id' class="chzn-select text field" multiple="multiple">
-	 		 <?php $friends=$this->users_model->composeFriends($this->userId); 
+	 		 <?php 
 			 foreach($friends as $frd){
-			 echo "<option value='".$frd->id."'>".$frd->email."</option>";
+			 echo "<option value='".$frd->pid."'>".$frd->email."</option>";
 			 }//echo selectBox('','players','id,email','status="1" and player_types_id="2" and id!="'.$this->userId.'"',''); ?>
 	  		</select>
         </li>

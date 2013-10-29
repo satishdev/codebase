@@ -174,7 +174,7 @@ if (isset($this->userType) && $this->userType == 2) {
 
                 <ul>
 
-                    <li><a class="item" href="<?php echo site_url('cb/allclubs'); ?>">Join Golf Courses</a></li>
+                    <!--<li><a class="item" href="<?php //echo site_url('cb/allclubs'); ?>">Join Golf Courses</a></li>-->
 
                     <li><a class="item" href="<?= base_url() ?>teetime_golfcourse/golf_course/">My Golf Courses</a></li>
 
