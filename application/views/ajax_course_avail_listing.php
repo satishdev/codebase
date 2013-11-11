@@ -258,7 +258,7 @@
 
 				$time_len=strlen($row[$i]->tm);
 
-				$am=strtotime("0000:00:00 12:59:59");
+				$am=strtotime("0000:00:00 11:59:59");
 
 				
 
@@ -295,8 +295,8 @@
 						//heading time set
 
 						if($main_startc>$am){
-
-							$main_start=$main_start-12;
+                                                        if($main_start > 12)
+                                                            $main_start=$main_start-12;
 
 							$main_start=$main_start.':00PM';
 
@@ -312,7 +312,8 @@
 
 						if($main_endc>$am){
 
-							$main_end=$main_end-12;
+							if($main_end > 12)
+                                                            $main_end=$main_end-12;
 
 							$main_end=$main_end.':00PM';
 
@@ -372,7 +373,8 @@
 
 						if($main_startc>$am){
 
-							$main_start=$main_start-12;
+							if($main_start > 12)
+                                                            $main_start=$main_start-12;
 
 							$main_start=$main_start.':00PM';
 
@@ -388,7 +390,8 @@
 
 						if($main_endc>$am){
 
-							$main_end=$main_end-12;
+							if($main_end > 12)
+                                                            $main_end=$main_end-12;
 
 							$main_end=$main_end.':00PM';
 
@@ -429,12 +432,13 @@
 						//time set on every course
 
 						if($mytime_am_pm>$am){
+                                                    
+                                                $mytime=explode(':',$mytime);
+                                                if($mytime[0] > 12)
+                                                    $mytime[0]=$mytime[0]-12;
 
-						$mytime=explode(':',$mytime);
-
-						$$mytime[0]=$mytime[0]-12;
-
-						$mytime=$$mytime[0].':'.$mytime[1];
+						$mytime=$mytime[0].':'.$mytime[1];
+                                                    
 
 						echo '<div class="golf_div1"><p>'.$mytime.'PM</p></div>';
 
@@ -492,7 +496,8 @@
 
 						if($main_startc>$am){
 
-							$main_start=$main_start-12;
+							if($main_start > 12)
+                                                            $main_start=$main_start-12;
 
 							$main_start=$main_start.':00PM';
 
@@ -506,7 +511,8 @@
 
 						if($main_endc>$am){
 
-							$main_end=$main_end-12;
+							if($main_end > 12)
+                                                            $main_end=$main_end-12;
 
 							$main_end=$main_end.':00PM';
 
@@ -550,7 +556,8 @@
 
 						if($main_startc>$am){
 
-						$main_start=$main_start-12;
+						if($main_start > 12)
+                                                    $main_start=$main_start-12;
 
 						$main_start=$main_start.':00PM';
 
@@ -564,7 +571,8 @@
 
 						if($main_endc>$am){
 
-							$main_end=$main_end-12;
+							if($main_end > 12)
+                                                            $main_end=$main_end-12;
 
 							$main_end=$main_end.':00PM';
 
@@ -736,13 +744,12 @@
 
 				
 
-				if($am_or_pm=0)
+				if($mytime_am_pm>$am){
 
-				$ajx_mytime=$mytime.'PM';
-
-				if($am_or_pm=1)
-
-				$ajx_mytime=$mytime.'AM';
+                                    $ajx_mytime=$mytime.'PM';
+                                }
+                                else
+                                    $ajx_mytime=$mytime.'AM';
 
 				
 

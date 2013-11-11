@@ -874,7 +874,11 @@ function __construct()
 
 	
 
-	
+	function expiry_check()
+        {
+          //  echo '<pre>';
+           // print_r($_POST);
+        }
 
 	
 
@@ -908,9 +912,9 @@ function __construct()
 
 		$this->form_validation->set_rules('ccsecret_no','Credit Card Security Code','trim|required');
 
-		$this->form_validation->set_rules('expire_month','Expiry Month','trim|required');
+		$this->form_validation->set_rules('expire_month','Expiry Month','trim|required|callback_expiry_check');
 
-		$this->form_validation->set_rules('expire_year','Expiry Year','trim|required');
+		$this->form_validation->set_rules('expire_year','Expiry Year','trim|required|callback_expiry_check');
 
 		if($this->form_validation->run()==FALSE)
 		{

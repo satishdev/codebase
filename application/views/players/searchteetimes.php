@@ -506,9 +506,9 @@
 					<?  
 					
 					if($am_or_pm=0)
-					$ajx_mytime=$mytime.'PM';
+					$ajx_mytime=$mytime;
 					if($am_or_pm=1)
-					$ajx_mytime=$mytime.'AM';
+					$ajx_mytime=$mytime;
 					
 					$ajx_price=$row[$i]->curr.' '.$row[$i]->ppPrice;
 	

@@ -1058,7 +1058,7 @@ function get_state()
 
 					$time_len=strlen($row[$i]->tm);
 
-					$am=strtotime("0000:00:00 12:59:59");
+					$am=strtotime("0000:00:00 11:59:59");
 
 					
 
@@ -1095,8 +1095,8 @@ function get_state()
 							//heading time set
 
 							if($main_startc>$am){
-
-								$main_start=$main_start-12;
+                                                                if($main_start > 12)
+                                                                    $main_start=$main_start-12;
 
 								$main_start=$main_start.':00PM';
 
@@ -1111,8 +1111,8 @@ function get_state()
 							
 
 							if($main_endc>$am){
-
-								$main_end=$main_end-12;
+                                                                if($main_end > 12)
+                                                                    $main_end=$main_end-12;
 
 								$main_end=$main_end.':00PM';
 
@@ -1171,8 +1171,8 @@ function get_state()
 							//heading time set
 
 							if($main_startc>$am){
-
-								$main_start=$main_start-12;
+                                                                if($main_start > 12)
+                                                                    $main_start=$main_start-12;
 
 								$main_start=$main_start.':00PM';
 
@@ -1187,8 +1187,8 @@ function get_state()
 							
 
 							if($main_endc>$am){
-
-								$main_end=$main_end-12;
+                                                                if($main_end > 12)
+                                                                    $main_end=$main_end-12;
 
 								$main_end=$main_end.':00PM';
 
@@ -1227,24 +1227,46 @@ function get_state()
 							<?
 
 							//time set on every course
-
+                                                        $cur_time_ts = strtotime(date('m-d-Y h:i a'));
+                                                        $mytime_ts = strtotime($mytime);
+                                                        
 							if($mytime_am_pm>$am){
 
 							$mytime=explode(':',$mytime);
-
-							$$mytime[0]=$mytime[0]-12;
+                                                        
+                                                        if($mytime[0] > 12)
+                                                        {
+                                                            $$mytime[0]=$mytime[0]-12;
+                                                        }
+                                                        else {
+                                                            $$mytime[0]=$mytime[0];
+                                                        }
 
 							$mytime=$$mytime[0].':'.$mytime[1];
-
-							echo '<div class="golf_div1"><p>'.$mytime.'PM</p></div>';
+                                                        /*if($cur_time_ts < $mytime_ts)
+                                                        {
+                                                            $mytime = 'Time out';
+                                                        }
+                                                        else
+                                                        {*/
+                                                            $mytime = $mytime.'PM';
+                                                        //}
+							echo '<div class="golf_div1"><p>'.$mytime.' </p></div>';
 
 							$am_or_pm=0;
 
 							}
 
 							else{
-
-							echo '<div class="golf_div1"><p>'.$mytime.'AM</p></div>';
+                                                        /*if($cur_time_ts < $mytime_ts)
+                                                        {
+                                                            $mytime = 'Time out';
+                                                        }
+                                                        else
+                                                        {*/
+                                                            $mytime = $mytime.'AM';
+                                                        //}
+							echo '<div class="golf_div1"><p>'.$mytime.' </p></div>';
 
 							$am_or_pm=1;
 
@@ -1291,8 +1313,8 @@ function get_state()
 							//heading time set
 
 							if($main_startc>$am){
-
-								$main_start=$main_start-12;
+                                                                if($main_start > 12)
+                                                                    $main_start=$main_start-12;
 
 								$main_start=$main_start.':00PM';
 
@@ -1305,8 +1327,8 @@ function get_state()
 							}
 
 							if($main_endc>$am){
-
-								$main_end=$main_end-12;
+                                                                if($main_end > 12)
+                                                                    $main_end=$main_end-12;
 
 								$main_end=$main_end.':00PM';
 
@@ -1349,8 +1371,8 @@ function get_state()
 							//heading time set
 
 							if($main_startc>$am){
-
-							$main_start=$main_start-12;
+                                                            if($main_start > 12)
+                                                                $main_start=$main_start-12;
 
 							$main_start=$main_start.':00PM';
 
@@ -1363,8 +1385,8 @@ function get_state()
 							}
 
 							if($main_endc>$am){
-
-								$main_end=$main_end-12;
+                                                                if($main_end > 12)
+                                                                    $main_end=$main_end-12;
 
 								$main_end=$main_end.':00PM';
 
@@ -1399,18 +1421,33 @@ function get_state()
 						<?
 
 						//time set to every course
-
+                                                $cur_time_ts = strtotime(date('m-d-Y h:i a'));
+                                                $mytime_ts = strtotime($mytime);
 						if($mytime_am_pm>$am){
-
-						   echo '<div class="golf_div1"><p>'.$mytime.'PM</p></div>';
+                                                    /*if($cur_time_ts < $mytime_ts)
+                                                    {
+                                                        $mytime = 'Time out';
+                                                    }
+                                                    else
+                                                    {*/
+                                                        $mytime = $mytime.'PM';
+                                                    //}
+						   echo '<div class="golf_div1"><p>'.$mytime.' </p></div>';
 
 						   $am_or_pm=0;
 
 						}
 
 						else{
-
-						   echo '<div class="golf_div1"><p>'.$mytime.'AM</p></div>';
+                                                    /*if($cur_time_ts < $mytime_ts)
+                                                    {
+                                                        $mytime = 'Time out';
+                                                    }
+                                                    else
+                                                    {*/
+                                                        $mytime = $mytime.'AM ';
+                                                    //}
+						   echo '<div class="golf_div1"><p>'.$mytime.' </p></div>';
 
 						   $am_or_pm=1;
 
@@ -1538,11 +1575,11 @@ function get_state()
 
 					if($am_or_pm=0)
 
-					$ajx_mytime=$mytime.'PM';
+					$ajx_mytime=$mytime;
 
 					if($am_or_pm=1)
 
-					$ajx_mytime=$mytime.'AM';
+					$ajx_mytime=$mytime;
 
 					
 
